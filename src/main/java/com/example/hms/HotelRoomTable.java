@@ -6,6 +6,8 @@ public class HotelRoomTable {
     String capacity;
     String price;
     String status;
+    public HotelRoomTable(){}
+
     public HotelRoomTable(String roomNo, String type, String capacity, String price, String status){
         this.roomNo = roomNo;
         this.type = type;
@@ -54,4 +56,14 @@ public class HotelRoomTable {
         this.status = status;
     }
 
+    @Override
+    public String toString() {
+        return "HotelRoomTable{" +
+                "roomNo='" + roomNo + '\'' +
+                ", type='" + type + '\'' +
+                ", capacity='" + capacity + '\'' +
+                ", price='" + price + '\'' +
+                ", status='" + status + '\'' +
+                '}';
+    }
 }
