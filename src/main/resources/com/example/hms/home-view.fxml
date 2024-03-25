@@ -15,27 +15,27 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="542.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.SceneController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.SceneController">
     <children>
-        <ImageView fitHeight="117.0" fitWidth="543.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../../../image/Cadt.jpg" />
-            </image></ImageView>
-        <StackPane prefHeight="306.0" prefWidth="542.0">
+        <ImageView fitHeight="90.0" fitWidth="740.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/logo.jpg" />
+         </image></ImageView>
+        <StackPane prefHeight="514.0" prefWidth="694.0">
             <children>
-                <TabPane prefHeight="221.0" prefWidth="517.0" tabClosingPolicy="UNAVAILABLE" tabMinWidth="87.0">
+                <TabPane prefHeight="430.0" prefWidth="620.0" tabClosingPolicy="UNAVAILABLE" tabMinWidth="87.0">
                     <tabs>
                         <Tab text="Home">
                             <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                     <children>
-                                        <Button layoutX="431.0" layoutY="13.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" text="User Info" />
-                                        <Label alignment="CENTER" layoutX="-6.0" layoutY="-1.0" prefHeight="279.0" prefWidth="542.0" text="Welcome&#10;  to our&#10;   Hotel" textFill="#1c3e56">
+                                        <Button layoutX="620.0" layoutY="13.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" text="User Info" />
+                                        <Label alignment="CENTER" layoutX="-6.0" layoutY="-1.0" prefHeight="402.0" prefWidth="733.0" text="Welcome&#10;  to our&#10;   Hotel" textFill="#1c3e56">
                                             <font>
                                                 <Font name="System Bold" size="30.0" />
                                             </font>
                                         </Label>
-                                        <Button layoutX="431.0" layoutY="237.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" text="Log out">
+                                        <Button layoutX="620.0" layoutY="360.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" text="Log out">
                                             <textFill>
                                                 <LinearGradient endX="1.0" endY="1.0">
                                                     <stops>
@@ -58,7 +58,8 @@
                         </Tab>
                         <Tab text="Room Detail">
                             <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="178.0" prefWidth="517.0">
+                                <AnchorPane minHeight="0.0" minWidth="0.0" onDragDetected="#print" prefHeight="367.0" prefWidth="668.0">
+                                    <fx:include source="list-room-view.fxml" />
                                     <padding>
                                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                     </padding>
@@ -66,7 +67,7 @@
                             </content>
                         </Tab>
                         <Tab text="Check-In">
-                            <fx:include source="checkin-view.fxml"/>
+                            <fx:include source="checkin-view.fxml" />
                             <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                             </content>
