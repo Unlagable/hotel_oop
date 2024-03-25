@@ -57,4 +57,7 @@ public class SceneController {
         }
         pw.close();
     }
+    public void print(ActionEvent event){
+        System.out.println("Hello");
+    }
 }
