@@ -6,37 +6,40 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="542.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.HelloController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="542.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.SceneController">
    <children>
        <ImageView fitHeight="117.0" fitWidth="543.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../image/Cadt.jpg" />
          </image></ImageView>
-      <MenuBar prefHeight="26.0" prefWidth="339.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="Home">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Room Detail">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Booking Detail">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
+      <HBox prefHeight="125.0" prefWidth="542.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" text="🏠 Home">
+               <HBox.margin>
+                  <Insets left="6.0" right="5.0" />
+               </HBox.margin></Button>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" text="🔍 Room Detail">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin></Button>
+            <Button layoutX="136.0" layoutY="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" text="⇦ Check-In">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button layoutX="261.0" layoutY="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" text="⟲ History">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
       <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" text="User Info">
          <VBox.margin>
             <Insets left="470.0" />
          </VBox.margin>
       </Button>
-      <Label alignment="CENTER" prefHeight="301.0" prefWidth="542.0" text="Welcome&#10;  to our&#10;   Hotel">
+      <Label alignment="CENTER" prefHeight="279.0" prefWidth="542.0" text="Welcome&#10;  to our&#10;   Hotel">
          <font>
             <Font size="30.0" />
          </font>
