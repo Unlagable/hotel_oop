@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="403.0" prefWidth="674.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.ListRoomController">
+<AnchorPane prefHeight="403.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.ListRoomController">
    <children>
       <BorderPane layoutY="-41.6" prefHeight="442.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-40.0" AnchorPane.topAnchor="-42.0">
          <top>
@@ -43,11 +43,11 @@
          <center>
             <TableView fx:id="list_user_tableview" prefHeight="319.0" prefWidth="624.0" BorderPane.alignment="CENTER">
               <columns>
-                <TableColumn fx:id="number" minWidth="0.0" prefWidth="67.99999845027924" text="Room No: " />
+                <TableColumn fx:id="number" minWidth="0.0" prefWidth="75.0" text="Room No: " />
                 <TableColumn fx:id="type" prefWidth="194.39997100830078" text="Type: " />
                   <TableColumn fx:id="capacity" prefWidth="124.800048828125" text="Capacity" />
-                  <TableColumn fx:id="price" minWidth="0.0" prefWidth="67.99999845027924" text="Price: " />
-                  <TableColumn fx:id="status" prefWidth="124.800048828125" text="Status" />
+                  <TableColumn fx:id="price" minWidth="0.0" prefWidth="124.0" text="Price: " />
+                  <TableColumn fx:id="status" prefWidth="180.0" text="Status" />
               </columns>
                <BorderPane.margin>
                   <Insets right="40.0" top="10.0" />
