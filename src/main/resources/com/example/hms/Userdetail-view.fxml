@@ -22,10 +22,10 @@
         </Label>
         <TableView prefHeight="200.0" prefWidth="200.0">
             <columns>
-                <TableColumn prefWidth="161.60003662109375" text="Name" />
-                <TableColumn prefWidth="175.20001220703125" text="E-mail" />
-                <TableColumn prefWidth="107.199951171875" text="Phone" />
-                <TableColumn prefWidth="159.2000732421875" text="Address" />
+                <TableColumn prefWidth="188.0" text="Name" />
+                <TableColumn prefWidth="250.4000244140625" text="E-mail" />
+                <TableColumn prefWidth="168.7999267578125" text="Phone" />
+                <TableColumn minWidth="0.0" prefWidth="0.0" />
                 <TableColumn minWidth="0.0" prefWidth="0.0" />
             </columns>
         </TableView>
