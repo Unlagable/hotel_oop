@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="316.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label alignment="CENTER" contentDisplay="RIGHT" text="User Detail">
+            <VBox.margin>
+                <Insets bottom="10.0" left="250.0" right="10.0" top="15.0" />
+            </VBox.margin>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TableView prefHeight="200.0" prefWidth="200.0">
+            <columns>
+                <TableColumn prefWidth="161.60003662109375" text="Name" />
+                <TableColumn prefWidth="175.20001220703125" text="E-mail" />
+                <TableColumn prefWidth="107.199951171875" text="Phone" />
+                <TableColumn prefWidth="159.2000732421875" text="Address" />
+                <TableColumn minWidth="0.0" prefWidth="0.0" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>
