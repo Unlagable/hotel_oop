@@ -8,7 +8,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
@@ -22,18 +21,44 @@
          <image>
             <Image url="@../../../image/Cadt.jpg" />
          </image></ImageView>
-      <StackPane prefHeight="150.0" prefWidth="200.0">
+      <StackPane prefHeight="306.0" prefWidth="542.0">
          <children>
-            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" tabMinWidth="87.0">
+            <TabPane prefHeight="221.0" prefWidth="517.0" tabClosingPolicy="UNAVAILABLE" tabMinWidth="87.0">
               <tabs>
                 <Tab text="Home">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button layoutX="431.0" layoutY="13.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" text="User Info" />
+                              <Label alignment="CENTER" layoutY="-8.0" prefHeight="279.0" prefWidth="542.0" text="Welcome&#10;  to our&#10;   Hotel" textFill="#1c3e56">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="431.0" layoutY="237.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" text="Log out">
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.0986354798078537" green="0.10250162333250046" blue="0.10526315867900848" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Button>
+                           </children></AnchorPane>
                   </content>
                 </Tab>
                 <Tab text="Room Detail">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="178.0" prefWidth="517.0">
                            <padding>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
@@ -65,40 +90,5 @@
             <Insets />
          </VBox.margin>
       </StackPane>
-      <HBox layoutX="10.0" layoutY="104.0" prefHeight="125.0" prefWidth="542.0" />
-      <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" text="User Info">
-         <VBox.margin>
-            <Insets left="450.0" />
-         </VBox.margin>
-      </Button>
-      <Label alignment="CENTER" prefHeight="279.0" prefWidth="542.0" text="Welcome&#10;  to our&#10;   Hotel" textFill="#1c3e56">
-         <font>
-            <Font name="System Bold" size="30.0" />
-         </font>
-         <VBox.margin>
-            <Insets />
-         </VBox.margin>
-      </Label>
-      <Button layoutX="480.0" layoutY="153.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" text="Log out">
-         <VBox.margin>
-            <Insets bottom="20.0" left="450.0" top="30.0" />
-         </VBox.margin>
-         <textFill>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="0.0986354798078537" green="0.10250162333250046" blue="0.10526315867900848" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </textFill>
-      </Button>
    </children>
 </VBox>
