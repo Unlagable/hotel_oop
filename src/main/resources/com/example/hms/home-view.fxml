@@ -11,7 +11,7 @@
     <children>
         <ImageView fitHeight="117.0" fitWidth="543.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../image/Cadt.jpg" />
+                <Image url="@../../../image/logo.jpg" />
             </image></ImageView>
         <StackPane prefHeight="467.0" prefWidth="700.0">
             <children>
@@ -22,7 +22,7 @@
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="295.0" prefWidth="674.0">
                                     <children>
                                         <Button layoutX="560.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="User Info" />
-                                        <Button layoutX="560.0" layoutY="362.0" mnemonicParsing="false" onAction="#backToLogin2" prefHeight="50.0" prefWidth="100.0" text="Log out">
+                                        <Button layoutX="560.0" layoutY="350.0" mnemonicParsing="false" onAction="#backToLogin2" prefHeight="50.0" prefWidth="100.0" text="Log out">
                                             <textFill>
                                                 <LinearGradient endX="1.0" endY="1.0">
                                                     <stops>

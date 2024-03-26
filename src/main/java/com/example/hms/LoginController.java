@@ -62,7 +62,7 @@ public class LoginController {
 
 //        ArrayList<HotelRoomTable> hotel = new ArrayList<>();
         File fl = new File("adminDetail.txt");
-        String fName = "home-view.fxml";
+        String fName = "homeAdmin-view.fxml";
 //        FileOutputStream fos = new FileOutputStream(fl,true);
 //        PrintWriter pw = new PrintWriter(fos);
 //        writeFile(hotel,pw);
