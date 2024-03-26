@@ -30,7 +30,7 @@ public class Main extends Application {
     public void logout(Stage stage){
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Logout");
+        alert.setTitle("You're About To Exit");
         alert.setHeaderText("You're about to logout!");
         alert.setContentText("Do you want to save before exiting?");
 
