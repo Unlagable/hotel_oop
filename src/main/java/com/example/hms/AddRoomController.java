@@ -4,21 +4,24 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.io.*;
+import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
-public class AddRoomController {
-    private static final String DATA_FILE_PATH = "rooms.txt";
-
+public class AddRoomController implements Initializable {
     @FXML
-    protected TextField txt_number;
+    protected TextField txt_RoomNo;
     @FXML
     protected TextField txt_type;
     @FXML
@@ -26,99 +29,100 @@ public class AddRoomController {
     @FXML
     protected TextField txt_price;
     @FXML
-    protected TextField txt_status;
-
+    protected ChoiceBox<String> choiceBox_Status;
     @FXML
     protected Label lb_mess;
-    @FXML
-    protected Label lb_mess_error;
+//    @FXML
+//    protected Label lb_mess_error;
+    private String[] status = {"Available","Unavailable"};
 
-    @FXML
-    protected void onSubmit(Event e) {
-        if (txt_type.getText().length() > 0 && txt_number.getText().length() > 0) {
-            Room room = new Room();
-            room.setNumber(Integer.parseInt(txt_number.getText()));
-            room.setType(txt_type.getText());
-            room.setCapacity(txt_capacity.getText());
-            room.setPrice(Integer.parseInt(txt_price.getText()));
-            room.setStatus(txt_status.getText());
-            txt_number.setText("");
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        choiceBox_Status.getItems().addAll(status);
+    }
+
+    public void cancelBtn(ActionEvent event){
+        ((Stage)(((Button)event.getSource()).getScene().getWindow())).close();
+    }
+
+    public void addRoomBtn(ActionEvent event){
+        if (!txt_RoomNo.getText().isEmpty() && !txt_type.getText().isEmpty() && !txt_capacity.getText().isEmpty() && !txt_price.getText().isEmpty() && !choiceBox_Status.getSelectionModel().isEmpty()){
+            HotelRoomTable room = new HotelRoomTable(txt_RoomNo.getText(),txt_type.getText(),txt_capacity.getText(),txt_price.getText(),choiceBox_Status.getValue());
+            txt_RoomNo.setText("");
             txt_type.setText("");
             txt_capacity.setText("");
             txt_price.setText("");
-            txt_status.setText("");
+            choiceBox_Status.setValue("");
 
-            saveRoom(room);
-            System.out.println("Save Success!");
-            lb_mess.setText("Save Success!");
-            lb_mess_error.setText("");
-        } else {
-            lb_mess_error.setText("You should input number and type!");
-            lb_mess.setText("");
-            System.out.println("You should input number and type!");
+
+
+            Main.roomList.add(room);
+            System.out.println("Add Succeed");
+            lb_mess.setText("Room Successfully Added");
+            System.out.println(room);
+        }else {
+            lb_mess.setText("Please Enter All Information");
         }
+
     }
 
-    public void addRoom(ActionEvent event) throws IOException {
-        File file = new File("hotelRoom.txt");
-        String fxmlName = "list-room-view.fxml";
 
-        int number = Integer.parseInt(txt_number.getText());
-        String type = txt_type.getText();
-        String capacity = txt_capacity.getText();
-        int price = Integer.parseInt(txt_price.getText());
-        String status = txt_status.getText();
 
-        Room room = new Room(number, type, capacity, price, status);
-        writeRoomToFile(room, file);
 
-        readFile(file);
-    }
+//    @FXML
+//    protected void onSubmit(Event e){
+//        if(txt_type.getText().length()>0 &&
+//                txt_RoomNo.getText().length()>0) {
+////            User u = new User(txt_name.getText(),txt_gen.getText(),
+////                    Integer.parseInt(txt_age.getText()));
+//            Room u = new Room();
+////            u.name = txt_name.getText();
+//            u.setNumber(Integer.parseInt(txt_RoomNo.getText()));
+//            u.setType(txt_type.getText());
+//            u.setCapacity(txt_capacity.getText());
+//            u.setPrice(Integer.parseInt(txt_price.getText()));
+//            u.setStatus(txt_status.getText());
+//            txt_RoomNo.setText("");
+//            txt_type.setText("");
+//            txt_capacity.setText("");
+//            txt_price.setText("");
+//            txt_status.setText("");
+//
+//            Apps.ulist.add(u);
+//            System.out.println("Save Success !");
+//            lb_mess.setText("Save Success !");
+//            lb_mess_error.setText("");
+////        u.display();
+////            System.out.println("submit" + txt_name.getText() + " " + txt_age.getText());
+//        }else{
+//            lb_mess_error.setText("you should input name and age!");
+//            lb_mess.setText("");
+//            System.out.println("you should input name and age!");
+//        }
+//    }
+//
+//    @FXML
+//    protected  void onShowList(Event event) throws IOException {
+//       /*
+//        System.out.println("List User :");
+//        for (int i = 0; i <ulist.size() ; i++) {
+//           User u = ulist.get(i);
+//           u.display();
+//        }
+//
+//        //  */
+//        Parent root = FXMLLoader.load(Apps.class.getResource("home-view.fxml"));
+//        Stage stage = (Stage) ( (Node)event.getSource()).getScene().getWindow();
+//        Scene scene = new Scene(root);
+//        stage.setWidth(stage.getWidth());
+//        stage.setHeight(stage.getHeight());
+//        stage.setTitle("List Room");
+//        stage.setScene(scene);
+//        stage.show();
+//    }
 
-    @FXML
-    protected void onShowList(Event event) throws IOException {
-        Parent root = FXMLLoader.load(Apps.class.getResource("home-view.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setWidth(stage.getWidth());
-        stage.setHeight(stage.getHeight());
-        stage.setTitle("List Room");
-        stage.setScene(scene);
-        stage.show();
-    }
 
-    private void saveRoom(Room room) {
-        try (PrintWriter writer = new PrintWriter(new FileWriter(DATA_FILE_PATH, true))) {
-            writer.println(room.getNumber() + "," + room.getType() + "," + room.getCapacity() + "," + room.getPrice() + "," + room.getStatus());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
-    private void writeRoomToFile(Room room, File file) {
-        try (PrintWriter writer = new PrintWriter(new FileWriter(file, true))) {
-            writer.println(room.getNumber() + "," + room.getType() + "," + room.getCapacity() + "," + room.getPrice() + "," + room.getStatus());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
-    private void readFile(File file) {
-        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] roomData = line.split(",");
-                int number = Integer.parseInt(roomData[0]);
-                String type = roomData[1];
-                String capacity = roomData[2];
-                int price = Integer.parseInt(roomData[3]);
-                String status = roomData[4];
 
-                Room room = new Room(number, type, capacity, price, status);
-                System.out.println(room);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }
