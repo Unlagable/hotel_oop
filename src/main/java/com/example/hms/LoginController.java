@@ -6,6 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -60,7 +62,7 @@ public class LoginController {
 
 //        ArrayList<HotelRoomTable> hotel = new ArrayList<>();
         File fl = new File("adminDetail.txt");
-        String fName = "home-view.fxml";
+        String fName = "homeAdmin-view.fxml";
 //        FileOutputStream fos = new FileOutputStream(fl,true);
 //        PrintWriter pw = new PrintWriter(fos);
 //        writeFile(hotel,pw);
@@ -115,6 +117,22 @@ public class LoginController {
         stage.setTitle("Hotel Login");
         stage.setScene(scene);
         stage.show();
+    }
+    public void backToLogin2(ActionEvent event) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Log out");
+        alert.setHeaderText("You're about to logout!");
+
+        if (alert.showAndWait().get() == ButtonType.OK) {
+            System.out.println("You successfully logged out");
+            Parent root = FXMLLoader.load(getClass().getResource("firstlogin-view.fxml"));
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setTitle("Hotel Login");
+            stage.setScene(scene);
+            stage.show();
+
+        }
     }
 
 
