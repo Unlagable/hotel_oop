@@ -61,7 +61,7 @@
             <Insets top="10.0" />
          </VBox.margin>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="296.0" spacing="10.0">
+      <HBox prefHeight="61.0" prefWidth="363.0" spacing="10.0">
          <children>
             <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#login" prefHeight="54.0" prefWidth="126.0" text="Log in">
                <HBox.margin>
@@ -77,5 +77,10 @@
             <Insets left="50.0" right="50.0" />
          </padding>
       </HBox>
+      <Label fx:id="lb_mess" alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="40.0" prefWidth="363.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
    </children>
 </VBox>

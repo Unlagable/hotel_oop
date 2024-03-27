@@ -17,6 +17,8 @@ import java.util.Scanner;
 
 public class Main extends Application {
     public static ArrayList<HotelRoomTable> roomList = new ArrayList<>();
+    public static ArrayList<AllRoomDetail> roomDetails = new ArrayList<>();
+    public static ArrayList<HotelRoomTable> availableRoomList = new ArrayList<>();
     File fl = new File("roomListTable.txt");
     FileOutputStream fos;
 
@@ -24,6 +26,7 @@ public class Main extends Application {
         try {
             fos = new FileOutputStream(fl,true);
             readRoomTable(roomList,fl);
+            addToAvailableRoom();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -98,5 +101,13 @@ public class Main extends Application {
             pw.println(room.getRoomNo()+";"+room.getType()+";"+room.getCapacity()+";"+room.getPrice()+";"+room.getStatus());
         }
         pw.close();
+    }
+    public void addToAvailableRoom(){
+        for (HotelRoomTable room:roomList) {
+            if (room.getStatus().equalsIgnoreCase("Available")){
+                availableRoomList.add(room);
+                System.out.println(room);
+            }
+        }
     }
 }
