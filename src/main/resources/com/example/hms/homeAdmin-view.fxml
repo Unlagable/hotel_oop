@@ -26,7 +26,7 @@
                                     <Font name="System Bold" size="30.0" />
                                  </font>
                               </Label>
-                              <Button layoutX="560.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="User Info" />
+                              <Button layoutX="560.0" layoutY="14.0" mnemonicParsing="false" onAction="#checkInfoBtn" prefHeight="50.0" prefWidth="100.0" text="User Info" />
                               <Button layoutX="560.0" layoutY="350.0" mnemonicParsing="false" onAction="#backToLogin2" prefHeight="50.0" prefWidth="100.0" text="Log out">
                                  <textFill>
                                     <LinearGradient endX="1.0" endY="1.0">

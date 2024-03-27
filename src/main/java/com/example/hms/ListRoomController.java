@@ -74,7 +74,7 @@ public class ListRoomController implements Initializable {
 //        stage.setHeight(stage.getHeight());
 //        stage.setScene(scene);
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("addroom-view.fxml"));
-        Parent root1 = (Parent) fxmlLoader.load();
+        Parent root1 = fxmlLoader.load();
         Stage stage = new Stage();
         stage.setTitle("Add Room");
         stage.setScene(new Scene(root1));

@@ -9,10 +9,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 
@@ -27,6 +29,8 @@ public class LoginController {
     TextField passwordTextField;
     ArrayList<UserDetail> users = new ArrayList<>();
     ArrayList<UserDetail> admin = new ArrayList<>();
+
+    public static UserDetail currentUser = new UserDetail();
 //    File fl = new File("userDetail.txt");
 
 
@@ -75,13 +79,14 @@ public class LoginController {
 
     }
     public void checkLogin(ActionEvent event, String username, String password, String fName, ArrayList<UserDetail> users) throws IOException {
-
-
         for (UserDetail user:users) {
             System.out.println("check");
-            System.out.println(user);
-            if (user.getUsername().equalsIgnoreCase(username) && user.getPassword().equalsIgnoreCase(password)){
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)){
                 System.out.println("Login Correct");
+                currentUser.setUsername(user.getUsername());
+                currentUser.setPassword(user.getPassword());
+                currentUser.setEmail(user.getEmail());
+                currentUser.setPhoneNum(user.getPhoneNum());
                 getHomeScene(event,fName);
                 break;
             }
@@ -125,7 +130,7 @@ public class LoginController {
 
         if (alert.showAndWait().get() == ButtonType.OK) {
             System.out.println("You successfully logged out");
-            Parent root = FXMLLoader.load(getClass().getResource("firstlogin-view.fxml"));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("firstlogin-view.fxml")));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setTitle("Hotel Login");
@@ -133,6 +138,17 @@ public class LoginController {
             stage.show();
 
         }
+    }
+
+    public void checkInfoBtn(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Userdetail-view.fxml"));
+        Parent root2 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("User Info");
+        stage.setScene(new Scene(root2));
+        stage.initModality(Modality.APPLICATION_MODAL);
+
+        stage.show();
     }
 
 
