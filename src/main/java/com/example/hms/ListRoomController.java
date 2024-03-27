@@ -60,8 +60,6 @@ public class ListRoomController implements Initializable {
 //        );
 //        //*/
 //       list.addAll(Apps.ulist);
-        HotelRoomTable r1 = new HotelRoomTable("1","11","2","3","4");
-        HotelRoomTable r2 = new HotelRoomTable("11","12","22","33","44");
         list.addAll(Main.roomList);
         list_user_tableview.setItems(list);
     }
@@ -86,12 +84,13 @@ public class ListRoomController implements Initializable {
     }
 
     @FXML
-    protected  void onTest(ActionEvent event) throws IOException {
-
+    protected  void refreshBtn(ActionEvent event){
+        list.clear();
+        loadData();
 
 //        list.clear();
 //        list.addAll(Apps.ulist);
-        list_user_tableview.getItems().add(Main.roomList.get(0));
+//        list_user_tableview.getItems().add(Main.roomList.get(0));
 
     }
 

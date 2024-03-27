@@ -4,15 +4,15 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.ListRoomController">
    <children>
-      <TableView prefHeight="430.0" prefWidth="691.0">
+      <TableView fx:id="list_user_tableview" prefHeight="430.0" prefWidth="691.0">
         <columns>
-          <TableColumn prefWidth="64.0" text="Nº" />
-          <TableColumn prefWidth="162.80001831054688" text="Type" />
-            <TableColumn prefWidth="150.00003051757812" text="Capicity" />
-            <TableColumn prefWidth="155.5999755859375" text="Price" />
-            <TableColumn prefWidth="143.60003662109375" text="Status" />
+          <TableColumn fx:id="roomNo" prefWidth="64.0" text="Nº" />
+          <TableColumn fx:id="type" prefWidth="162.80001831054688" text="Type" />
+            <TableColumn fx:id="capacity" prefWidth="150.00003051757812" text="Capacity" />
+            <TableColumn fx:id="price" prefWidth="139.0" text="Price" />
+            <TableColumn fx:id="status" prefWidth="154.5999755859375" text="Status" />
         </columns>
       </TableView>
    </children>

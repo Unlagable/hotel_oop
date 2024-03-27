@@ -1,1 +1,4 @@
 ksjdf;lkfjdslk;lfkdjls;fkjds;Unavailable
+001;VIP;3;25;Available
+76;single room;5;1200;Available
+fsdkj;skjf;kjdsfk;lkjfks;Available
