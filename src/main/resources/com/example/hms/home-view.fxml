@@ -40,7 +40,9 @@
                                                 </LinearGradient>
                                             </textFill>
                                         </Button>
-                                        <Label alignment="CENTER" layoutY="6.0" prefHeight="414.0" prefWidth="549.0" text="Welcome&#10;  to our&#10;   Hotel" textFill="#1c3e56">
+                              <ImageView fitHeight="407.0" fitWidth="556.0" pickOnBounds="true" preserveRatio="true" />
+
+                                        <Label alignment="CENTER" layoutY="6.0" prefHeight="414.0" prefWidth="549.0" text="Welcome&#10;to Golden&#10;   Hotel" textFill="#866c0b">
                                             <font>
                                                 <Font name="System Bold" size="30.0" />
                                             </font>
@@ -50,7 +52,7 @@
                         </Tab>
                         <Tab text="Room Detail">
                             <content>
-                                <fx:include source="Roomdetail-view.fxml" />
+                                <fx:include source="room-detail-view.fxml" />
                             </content>
                         </Tab>
                         <Tab text="Check-In">
@@ -60,7 +62,7 @@
                         </Tab>
                         <Tab text="History">
                             <content>
-                                <fx:include source="History-view.fxml" />
+                                <fx:include source="history-view.fxml" />
                             </content>
                         </Tab>
                     </tabs>
