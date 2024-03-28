@@ -34,7 +34,7 @@ public class AddRoomController implements Initializable {
     protected Label lb_mess;
 //    @FXML
 //    protected Label lb_mess_error;
-    private String[] status = {"Available","Unavailable"};
+    private final String[] status = {"Available","Unavailable"};
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

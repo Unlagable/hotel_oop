@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -27,6 +28,8 @@ public class LoginController {
     TextField usernameTextField;
     @FXML
     TextField passwordTextField;
+    @FXML
+    protected Label lb_mess;
     ArrayList<UserDetail> users = new ArrayList<>();
     ArrayList<UserDetail> admin = new ArrayList<>();
 
@@ -57,6 +60,7 @@ public class LoginController {
         String username = usernameTextField.getText();
         String password = passwordTextField.getText();
 
+
         readFile(users,fl);
         checkLogin(event,username,password,fName,users);
 
@@ -82,6 +86,8 @@ public class LoginController {
         for (UserDetail user:users) {
             System.out.println("check");
             if (user.getUsername().equals(username) && user.getPassword().equals(password)){
+                lb_mess.setText("");
+
                 System.out.println("Login Correct");
                 currentUser.setUsername(user.getUsername());
                 currentUser.setPassword(user.getPassword());
@@ -91,6 +97,7 @@ public class LoginController {
                 break;
             }
             System.out.println("Incorrect Login");
+            lb_mess.setText("Incorrect Login!");
         }
 
     }
