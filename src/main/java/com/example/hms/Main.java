@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -20,12 +21,16 @@ public class Main extends Application {
     public static ArrayList<AllRoomDetail> roomDetails = new ArrayList<>();
     public static ArrayList<HotelRoomTable> availableRoomList = new ArrayList<>();
     File fl = new File("roomListTable.txt");
+    File roomDetailFile = new File("roomDetailFile.txt");
     FileOutputStream fos;
+    FileOutputStream fox;
 
     {
         try {
             fos = new FileOutputStream(fl,true);
+            fox = new FileOutputStream(roomDetailFile,true);
             readRoomTable(roomList,fl);
+            readDataOfAllRoom(roomDetails,roomDetailFile);
             addToAvailableRoom();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
@@ -61,13 +66,18 @@ public class Main extends Application {
         if (alert.showAndWait().get() == ButtonType.OK) {
             System.out.println("You successfully logged out");
             FileOutputStream fos = null;
+            FileOutputStream fox = null;
+
             try {
                 fos = new FileOutputStream(fl,false);
+                fox = new FileOutputStream(roomDetailFile,false);
             } catch (FileNotFoundException e) {
                 throw new RuntimeException(e);
             }
             PrintWriter pw = new PrintWriter(fos);
+            PrintWriter px = new PrintWriter(fox);
             writeFile(roomList,pw);
+            writeDataOfAllRoom(roomDetails,px);
             stage.close();
         }
     }
@@ -103,6 +113,28 @@ public class Main extends Application {
         }
         pw.close();
     }
+    public void readDataOfAllRoom(ArrayList<AllRoomDetail> roomDetails, File file) throws FileNotFoundException {
+        Scanner cs  = new Scanner(file);
+        cs.useDelimiter(";|\r\n");
+
+        while (cs.hasNextLine()){
+            AllRoomDetail s = new AllRoomDetail();
+            s.setCheckInDate(LocalDate.parse(cs.next()));
+            s.setCheckOutDate(cs.next().equalsIgnoreCase("null")? null :LocalDate.parse(cs.next()));
+            s.setUser(new UserDetail(cs.next(),"", cs.next(), cs.next()));
+            s.setRoomTable(new HotelRoomTable(cs.next(),cs.next(),cs.next(),cs.next(),cs.next()));
+            cs.nextLine();
+            System.out.println(s);
+            roomDetails.add(s);
+        }
+    }
+    public static void writeDataOfAllRoom(ArrayList<AllRoomDetail> roomDetails, PrintWriter pw){
+        for (AllRoomDetail room:roomDetails) {
+            pw.println(room.getCheckInDate()+";"+room.getCheckOutDate() +";"+ room.getUser().getUsername() +";"+ room.getUser().getEmail() +";"+ room.getUser().getPhoneNum() +";"+ room.getRoomTable().getRoomNo() +";"+ room.getRoomTable().getType() +";"+ room.getRoomTable().getCapacity() +";"+ room.getRoomTable().getPrice() +";"+ room.getRoomTable().getStatus());
+        }
+        pw.close();
+    }
+
     public void addToAvailableRoom(){
         for (HotelRoomTable room:roomList) {
             if (room.getStatus().equalsIgnoreCase("Available")){

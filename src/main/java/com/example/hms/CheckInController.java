@@ -12,6 +12,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -37,8 +38,10 @@ public class CheckInController implements Initializable {
         for (HotelRoomTable room:Main.availableRoomList) {
             if (room.getRoomNo().equalsIgnoreCase(roomNum.getValue())){
                 room.setStatus("Unavailable");
-                System.out.println(room);
+                AllRoomDetail roomDetail = new AllRoomDetail(LoginController.currentUser,room,checkInDate.getValue());
                 Main.availableRoomList.remove(room);
+                Main.roomDetails.add(roomDetail);
+
                 break;
             }
         }
@@ -46,6 +49,7 @@ public class CheckInController implements Initializable {
         lb_capacity.setText("");
         lb_price.setText("");
         roomNum.setValue("");
+        checkInDate.setValue(null);
 
     }
     public void getCurrentUser(){

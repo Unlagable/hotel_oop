@@ -9,9 +9,18 @@ public class AllRoomDetail {
 
     private HotelRoomTable roomTable;
 
+
+
+    public AllRoomDetail (){}
+    public AllRoomDetail(UserDetail user,HotelRoomTable roomTable,LocalDate checkInDate){
+        user.setPassword("Womp Womp");
+        this.user = user;
+        this.roomTable = roomTable;
+        this.checkInDate = checkInDate;
+    }
     public void setUser(UserDetail user) {
         this.user = user;
-        this.user.setPassword("Woom Woom Woom");
+        this.user.setPassword("womp womp");
     }
 
     public void setRoomTable(HotelRoomTable roomTable) {
