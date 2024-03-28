@@ -64,6 +64,7 @@
       <HBox prefHeight="100.0" prefWidth="296.0" spacing="10.0">
          <children>
             <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#login" prefHeight="54.0" prefWidth="126.0" text="Log in">
+               style = " -fx:background-color: lightblue";
                <HBox.margin>
                   <Insets />
                </HBox.margin>

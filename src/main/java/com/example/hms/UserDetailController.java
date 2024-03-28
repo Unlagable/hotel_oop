@@ -41,3 +41,4 @@ public class UserDetailController implements Initializable {
         lb_phoneNum.setText(LoginController.currentUser.getPhoneNum());
     }
 }
+

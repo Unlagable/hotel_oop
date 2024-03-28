@@ -119,6 +119,7 @@ public class LoginController {
         Parent root = FXMLLoader.load(getClass().getResource("firstlogin-view.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("firstlogin-style.css").toExternalForm());
         stage.setTitle("Hotel Login");
         stage.setScene(scene);
         stage.show();
@@ -133,10 +134,10 @@ public class LoginController {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("firstlogin-view.fxml")));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("firstlogin-style.css").toExternalForm());
             stage.setTitle("Hotel Login");
             stage.setScene(scene);
             stage.show();
-
         }
     }
 
@@ -147,9 +148,6 @@ public class LoginController {
         stage.setTitle("User Info");
         stage.setScene(new Scene(root2));
         stage.initModality(Modality.APPLICATION_MODAL);
-
         stage.show();
     }
-
-
 }
