@@ -1,6 +1,2 @@
-ksjdf;lkfjdslk;lfkdjls;fkjds;Unavailable
-001;VIP;3;25;Unavailable
-76;single room;5;1200;Unavailable
-fsdkj;skjf;kjdsfk;lkjfks;Unavailable
-sfk;fdk;fk;df;Unavailable
-002;i;2i;if;Available
+2;03;3;3;Available
+5;03;3;3;Available

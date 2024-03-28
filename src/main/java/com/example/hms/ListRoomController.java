@@ -17,6 +17,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 public class ListRoomController implements Initializable {
@@ -84,7 +85,7 @@ public class ListRoomController implements Initializable {
     }
 
     @FXML
-    protected  void refreshBtn(ActionEvent event){
+    protected void refreshBtn(ActionEvent event){
         list.clear();
         loadData();
 
@@ -93,6 +94,24 @@ public class ListRoomController implements Initializable {
 //        list_user_tableview.getItems().add(Main.roomList.get(0));
 
     }
+    @FXML
+    private void deleteData(ActionEvent event){
+        TableView.TableViewSelectionModel<HotelRoomTable> selectionModel = list_user_tableview.getSelectionModel();
+        if (selectionModel.isEmpty()) System.out.println("select data ");
+        ObservableList<Integer> lists = selectionModel.getSelectedIndices();
+        Integer[] selectionIndices = new Integer[lists.size()];
+        selectionIndices = lists.toArray(selectionIndices);
+
+        Arrays.sort(selectionIndices);
+
+        Main.roomList.remove(list_user_tableview.getSelectionModel().getSelectedIndex());
+        for (int i = selectionIndices.length -1 ; i >= 0; i--) {
+            selectionModel.clearSelection(selectionIndices[i]);
+            list_user_tableview.getItems().remove(selectionIndices[i].intValue());
+
+        }
+    }
+
 
 
 }
