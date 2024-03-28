@@ -26,8 +26,12 @@
                                     <Font name="System Bold" size="30.0" />
                                  </font>
                               </Label>
-                              <Button layoutX="560.0" layoutY="14.0" mnemonicParsing="false" onAction="#checkInfoBtn" prefHeight="50.0" prefWidth="100.0" text="User Info" />
-                              <Button layoutX="560.0" layoutY="350.0" mnemonicParsing="false" onAction="#backToLogin2" prefHeight="50.0" prefWidth="100.0" text="Log out">
+                              <ImageView fitHeight="427.0" fitWidth="560.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button layoutX="560.0" layoutY="14.0" mnemonicParsing="false" onAction="#checkInfoBtn" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: b2b2b2;" text="User Info">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Button>
+                              <Button layoutX="560.0" layoutY="350.0" mnemonicParsing="false" onAction="#backToLogin2" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #c94c4c;" text="Log out">
                                  <textFill>
                                     <LinearGradient endX="1.0" endY="1.0">
                                        <stops>
@@ -44,6 +48,9 @@
                                        </stops>
                                     </LinearGradient>
                                  </textFill>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
                               </Button>
                            </children></AnchorPane>
                   </content>

@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="389.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.UserDetailController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="389.0" prefWidth="600.0" style="-fx-background-color: lightyellow;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.UserDetailController">
     <children>
         <Label fx:id="lb_title" alignment="CENTER" prefHeight="101.0" prefWidth="487.0" text="User's Detail">
             <font>
@@ -20,9 +20,9 @@
         </Label>
         <HBox prefHeight="233.0" prefWidth="600.0">
             <children>
-                <HBox prefHeight="191.0" prefWidth="600.0">
+                <HBox prefHeight="191.0" prefWidth="600.0" style="-fx-background-color: #D9D97A;">
                     <children>
-                        <VBox alignment="CENTER" prefHeight="229.0" prefWidth="410.0">
+                        <VBox alignment="CENTER" prefHeight="229.0" prefWidth="410.0" style="-fx-background-color: cream;">
                             <children>
                                 <HBox alignment="CENTER" prefHeight="43.0" prefWidth="600.0">
                                     <children>
@@ -127,9 +127,9 @@
         </HBox>
         <HBox alignment="CENTER_RIGHT" prefHeight="56.0" prefWidth="600.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#closeBtn" prefHeight="40.0" prefWidth="100.0" text="Close" textFill="#b41919">
+            <Button mnemonicParsing="false" onAction="#closeBtn" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: crimson;" text="Close" textFill="#302f2f">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="15.0" />
                </font></Button>
          </children>
          <VBox.margin>
