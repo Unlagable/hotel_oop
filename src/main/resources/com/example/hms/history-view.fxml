@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="328.0" prefWidth="596.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="328.0" prefWidth="612.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.HistoryController">
     <children>
         <Label alignment="TOP_CENTER" contentDisplay="RIGHT" text="Check In &amp; Out History">
             <VBox.margin>
@@ -18,13 +18,17 @@
                 <Font size="18.0" />
             </font>
         </Label>
-        <TableView prefHeight="319.0" prefWidth="596.0">
-            <columns>
-                <TableColumn prefWidth="78.40005648136139" text="Nº" />
-                <TableColumn prefWidth="166.40001678466797" text="Check-In" />
-                <TableColumn prefWidth="172.79998779296875" text="Check-Out" />
-                <TableColumn prefWidth="113.60000610351562" text="Price" />
-            </columns>
-        </TableView>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="262.0" prefWidth="596.0">
+         <children>
+              <TableView fx:id="historyListTable" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="262.0" prefWidth="617.0">
+                  <columns>
+                      <TableColumn fx:id="username" prefWidth="78.40005648136139" text="Nº" />
+                      <TableColumn fx:id="checkInDate" prefWidth="166.40001678466797" text="Check-In" />
+                      <TableColumn fx:id="checkOutDate" prefWidth="172.79998779296875" text="Check-Out" />
+                      <TableColumn fx:id="price" prefWidth="132.79999999999995" text="Price" />
+                  </columns>
+              </TableView>
+         </children>
+      </HBox>
     </children>
 </VBox>

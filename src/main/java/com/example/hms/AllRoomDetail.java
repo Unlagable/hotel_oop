@@ -10,6 +10,7 @@ public class AllRoomDetail {
     private HotelRoomTable roomTable;
 
 
+
     public AllRoomDetail (){}
     public AllRoomDetail(UserDetail user,HotelRoomTable roomTable,LocalDate checkInDate){
         user.setPassword("Womp Womp");
