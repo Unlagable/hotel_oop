@@ -67,7 +67,7 @@
                   </Tab>
                   <Tab text="Check-Out">
                     <content>
-
+                        <fx:include source="checkout-view.fxml"/>
                     </content>
                   </Tab>
                   <Tab text="History">
