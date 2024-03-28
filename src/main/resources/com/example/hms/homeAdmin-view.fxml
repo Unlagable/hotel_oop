@@ -72,7 +72,7 @@
                   </Tab>
                   <Tab text="History">
                     <content>
-                      <fx:include source="history-view.fxml" />
+                      <fx:include source="history-admin-view.fxml" />
                     </content>
                   </Tab>
               </tabs>
