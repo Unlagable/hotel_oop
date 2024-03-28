@@ -145,7 +145,7 @@
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <ChoiceBox fx:id="roomNum" onMouseClicked="#getAvailableRoom" prefHeight="16.0" prefWidth="135.0">
+                                          <ChoiceBox fx:id="roomNum" prefHeight="16.0" prefWidth="135.0">
                                              <HBox.margin>
                                                 <Insets top="8.0" />
                                              </HBox.margin>
@@ -238,7 +238,7 @@
                         </DatePicker>
                      </children>
                   </HBox>
-                  <Button mnemonicParsing="false" onAction="#checkInBtn" prefHeight="51.0" prefWidth="108.0" text="Check-In">
+                  <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="108.0" text="Check-In">
                      <font>
                         <Font size="14.0" />
                      </font>
