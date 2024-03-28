@@ -85,7 +85,7 @@ public class ListRoomController implements Initializable {
     }
 
     @FXML
-    protected  void refreshBtn(ActionEvent event){
+    protected void refreshBtn(ActionEvent event){
         list.clear();
         loadData();
 

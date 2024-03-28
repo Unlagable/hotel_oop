@@ -12,6 +12,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class CheckInController implements Initializable {
@@ -45,7 +46,6 @@ public class CheckInController implements Initializable {
         lb_capacity.setText("");
         lb_price.setText("");
         roomNum.setValue("");
-
 
     }
     public void getCurrentUser(){
