@@ -56,15 +56,13 @@ public class CheckInController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        for (HotelRoomTable roomN:Main.availableRoomList) {
-            roomNum.getItems().add(roomN.getRoomNo());
-        }
+        getAvailableRoom();
         getCurrentUser();
 //        Main.availableRoomList.removeIf(roomN -> roomN.getStatus().equalsIgnoreCase("Unavailable"));
         roomNum.setOnAction(this::showOnSelect);
     }
     public void showOnSelect(ActionEvent event){
-        String roomNumb= roomNum.getValue();
+        String roomNumb = roomNum.getValue();
         for (HotelRoomTable room:Main.availableRoomList) {
             if (room.getRoomNo().equalsIgnoreCase(roomNumb)){
                 lb_roomType.setText(room.getType());
@@ -73,5 +71,12 @@ public class CheckInController implements Initializable {
             }
         }
     }
+    public void getAvailableRoom(){
+            roomNum.getItems().clear();
+        for (HotelRoomTable roomN:Main.availableRoomList) {
+            roomNum.getItems().add(roomN.getRoomNo());
+        }
+    }
+
 
 }
