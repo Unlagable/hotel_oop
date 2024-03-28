@@ -18,6 +18,13 @@ public class AllRoomDetail {
         this.roomTable = roomTable;
         this.checkInDate = checkInDate;
     }
+    public AllRoomDetail(UserDetail user,HotelRoomTable roomTable,LocalDate checkInDate,LocalDate checkOutDate){
+        user.setPassword("Womp Womp");
+        this.user = user;
+        this.roomTable = roomTable;
+        this.checkInDate = checkInDate;
+        this.checkOutDate = checkOutDate;
+    }
     public void setUser(UserDetail user) {
         this.user = user;
         this.user.setPassword("womp womp");

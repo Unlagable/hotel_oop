@@ -20,6 +20,9 @@ public class Main extends Application {
     public static ArrayList<HotelRoomTable> roomList = new ArrayList<>();
     public static ArrayList<AllRoomDetail> roomDetails = new ArrayList<>();
     public static ArrayList<HotelRoomTable> availableRoomList = new ArrayList<>();
+    public static ArrayList<AllRoomDetail> unavailableRoomList = new ArrayList<>();
+
+
     File fl = new File("roomListTable.txt");
     File roomDetailFile = new File("roomDetailFile.txt");
     FileOutputStream fos;
@@ -32,6 +35,7 @@ public class Main extends Application {
             readRoomTable(roomList,fl);
             readDataOfAllRoom(roomDetails,roomDetailFile);
             addToAvailableRoom();
+            addToUnavailablelist();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -140,6 +144,13 @@ public class Main extends Application {
             if (room.getStatus().equalsIgnoreCase("Available")){
                 availableRoomList.add(room);
                 System.out.println(room);
+            }
+        }
+    }
+    public void addToUnavailablelist(){
+        for (AllRoomDetail room: roomDetails){
+            if (room.getRoomTable().getStatus().equalsIgnoreCase("Unavailable")){
+                unavailableRoomList.add(room);
             }
         }
     }

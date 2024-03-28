@@ -20,13 +20,13 @@
         </Label>
         <TableView prefHeight="378.0" prefWidth="701.0">
             <columns>
-                <TableColumn prefWidth="125.60000610351562" text="Name" />
-                <TableColumn prefWidth="121.60000610351562" text="Email" />
+                <TableColumn prefWidth="66.20001220703125" text="Room No" />
                 <TableColumn prefWidth="172.79998779296875" text="Check In" />
             <TableColumn prefWidth="156.79995727539062" text="Check-Out" />
-                <TableColumn prefWidth="66.20001220703125" text="Room No" />
-            <TableColumn prefWidth="196.20001220703125" text="Type" />
-            <TableColumn prefWidth="130.4000244140625" text="Capacity" />
+                <TableColumn prefWidth="125.60000610351562" text="Name" />
+            <TableColumn prefWidth="165.20001220703125" text="Type" />
+            <TableColumn prefWidth="163.5999755859375" text="Capacity" />
+                <TableColumn prefWidth="121.60000610351562" text="Email" />
             <TableColumn prefWidth="130.4000244140625" text="Price" />
             </columns>
         </TableView>
