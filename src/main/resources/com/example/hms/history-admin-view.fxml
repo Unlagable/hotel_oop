@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="811.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="853.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Label alignment="CENTER" contentDisplay="RIGHT" text="Check In &amp; Out History">
             <VBox.margin>
@@ -23,11 +23,11 @@
                 <TableColumn prefWidth="125.60000610351562" text="Name" />
                 <TableColumn prefWidth="121.60000610351562" text="Email" />
                 <TableColumn prefWidth="172.79998779296875" text="Check In" />
-            <TableColumn prefWidth="156.79995727539062" text="Check-Out" />
+                <TableColumn prefWidth="156.79995727539062" text="Check-Out" />
                 <TableColumn prefWidth="66.20001220703125" text="Room No" />
-            <TableColumn prefWidth="196.20001220703125" text="Type" />
-            <TableColumn prefWidth="130.4000244140625" text="Capacity" />
-            <TableColumn prefWidth="130.4000244140625" text="Price" />
+                <TableColumn prefWidth="128.5999755859375" text="Type" />
+                <TableColumn prefWidth="201.00006103515625" text="Capacity" />
+                <TableColumn prefWidth="130.4000244140625" text="Price" />
             </columns>
         </TableView>
     </children>
