@@ -1,5 +1,6 @@
 package com.example.hms;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -16,32 +17,42 @@ public class HistoryController implements Initializable {
     ObservableList<AllRoomDetail> historyList = FXCollections.observableArrayList();
     @FXML
     private TableView<AllRoomDetail> historyListTable;
-//    @FXML
-//    private TableColumn<HotelRoomTable,String> roomNo;
-//    @FXML
-//    private TableColumn<HotelRoomTable,String> type;
-//    @FXML
-//    private TableColumn<HotelRoomTable,String> capacity;
-//    @FXML
-//    private TableColumn<HotelRoomTable,String> price;
+
+
     @FXML
-    private TableColumn<UserDetail,String> email;
+    private TableColumn<AllRoomDetail,String> username;
     @FXML
-    private TableColumn<HotelRoomTable,String> status;
+    private TableColumn<AllRoomDetail,String> email;
     @FXML
-    private TableColumn<UserDetail,String> username;
+    private TableColumn<AllRoomDetail,String> phoneNumber;
     @FXML
     private TableColumn<AllRoomDetail, LocalDate> checkInDate;
     @FXML
     private TableColumn<AllRoomDetail,LocalDate> checkOutDate;
     @FXML
-    private TableColumn<HotelRoomTable,String> price;
+    private TableColumn<AllRoomDetail,String> roomNumber;
+    @FXML
+    private TableColumn<AllRoomDetail,String> roomType;
+    @FXML
+    private TableColumn<AllRoomDetail,String> roomCapacity;
+    @FXML
+    private TableColumn<AllRoomDetail,String> roomPrice;
+    @FXML
+    private TableColumn<AllRoomDetail,String> roomStatus;
+    @FXML
+    private TableColumn<AllRoomDetail,String> price;
 
     private void initeCols(){
-        username.setCellValueFactory(new PropertyValueFactory<>("user"));
+        username.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getUser().getUsername()));
+        roomNumber.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getRoomTable().getRoomNo()));
         checkInDate.setCellValueFactory(new PropertyValueFactory<>("checkInDate"));
         checkOutDate.setCellValueFactory(new PropertyValueFactory<>("checkOutDate"));
-        price.setCellValueFactory(new PropertyValueFactory<>("roomTable"));
+        email.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getUser().getEmail()));
+        phoneNumber.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getUser().getPhoneNum()));
+        roomType.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getRoomTable().getType()));
+        roomCapacity.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getRoomTable().getCapacity()));
+        roomStatus.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getRoomTable().getStatus()));
+        price.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getRoomTable().getPrice()));
 
 
     }
