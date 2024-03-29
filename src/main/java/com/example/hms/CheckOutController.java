@@ -86,7 +86,8 @@ public class CheckOutController implements Initializable {
                 room.getRoomTable().setStatus("Available");
                 AllRoomDetail roomDetail = new AllRoomDetail(room.getUser(),room.getRoomTable(),room.getCheckInDate(),checkOutDate.getValue());
                 Main.unavailableRoomList.remove(room);
-                Main.roomDetails.add(Main.unavailableRoomList.indexOf(room) ,roomDetail);
+                findUnavailableRoom(selectRoomNumber.getValue());
+//                Main.roomList.set(Main.unavailableRoomList.indexOf(room) ,roomDetail);
 
                 break;
             }
@@ -101,6 +102,13 @@ public class CheckOutController implements Initializable {
         selectRoomNumber.setValue("");
         checkOutDate.setValue(null);
 
+    }
+    public void findUnavailableRoom(String x){
+        for (HotelRoomTable room:Main.roomList) {
+            if (room.getRoomNo().equalsIgnoreCase(x)){
+                room.setStatus("Available");
+            }
+        }
     }
 
     @Override
