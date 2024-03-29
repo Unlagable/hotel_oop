@@ -4,7 +4,6 @@
     -fx-background-size: contain;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
-    -fx-background-color: #fff;
 }
 
 .log-bg{
@@ -22,10 +21,11 @@
 }
 
 .home-label{
-    -fx-text-fill: linear-gradient(to bottom right, #FFD700,#DAA520);;
+    -fx-background-color: linear-gradient(to bottom right, #DAA520,#FFD700);
     -fx-font-size: 50px;
     -fx-font-family: Algerian;
     -fx-background-position: center;
     -fx-background-image: url(../image/img_1.png);
     -fx-background-opacity: 20%;
+
 }

@@ -21,17 +21,16 @@
                   <content>
                     <AnchorPane minHeight="-Infinity" minWidth="-Infinity">
                            <children>
-                              <Label alignment="CENTER" layoutY="-8.0" prefHeight="426.0" prefWidth="674.0" text="Welcome&#10;to Golden&#10;   Hotel" textFill="#7e6807">
+                              <Label alignment="CENTER" layoutY="-8.0" prefHeight="475.0" prefWidth="720.0" styleClass="home-label" stylesheets="@../../../css/homeAdmin_style.css" text="Welcome&#10;to Golden&#10;   Hotel" textFill="#b99814">
                                  <font>
                                     <Font name="System Bold" size="30.0" />
                                  </font>
                               </Label>
-                              <ImageView fitHeight="427.0" fitWidth="592.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
-                              <Button layoutX="606.0" layoutY="14.0" mnemonicParsing="false" onAction="#checkInfoBtn" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: b2b2b2;" text="User Info">
+                              <Button layoutX="606.0" layoutY="14.0" mnemonicParsing="false" onAction="#checkInfoBtn" prefHeight="50.0" prefWidth="100.0" styleClass="login-btn" stylesheets="@../../../css/homeAdmin_style.css" text="User Info">
                                  <font>
                                     <Font size="15.0" />
                                  </font></Button>
-                              <Button layoutX="606.0" layoutY="367.0" mnemonicParsing="false" onAction="#backToLogin2" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #c94c4c;" text="Log out">
+                              <Button layoutX="606.0" layoutY="367.0" mnemonicParsing="false" onAction="#backToLogin2" prefHeight="50.0" prefWidth="100.0" styleClass="login-btn" stylesheets="@../../../css/homeAdmin_style.css" text="Log out">
                                  <textFill>
                                     <LinearGradient endX="1.0" endY="1.0">
                                        <stops>

@@ -1,0 +1,8 @@
+.box{
+    -fx-background-image: url(../image/img_3.png);
+    -fx-background-height: 600;
+    -fx-background-width: 320;
+}
+.button{
+    -fx-background-color: lightblue;
+}
