@@ -7,31 +7,31 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.LoginController">
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.LoginController">
    <children>
        <ImageView fitHeight="117.0" fitWidth="543.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../image/logo.jpg" />
          </image></ImageView>
-      <StackPane prefHeight="460.0" prefWidth="700.0">
+      <StackPane VBox.vgrow="ALWAYS">
          <children>
             <TabPane prefHeight="221.0" prefWidth="517.0" tabClosingPolicy="UNAVAILABLE" tabMinWidth="87.0">
               <tabs>
                 <Tab text="Home">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <AnchorPane minHeight="-Infinity" minWidth="-Infinity">
                            <children>
                               <Label alignment="CENTER" layoutY="-8.0" prefHeight="426.0" prefWidth="674.0" text="Welcome&#10;to Golden&#10;   Hotel" textFill="#7e6807">
                                  <font>
                                     <Font name="System Bold" size="30.0" />
                                  </font>
                               </Label>
-                              <ImageView fitHeight="427.0" fitWidth="560.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
-                              <Button layoutX="560.0" layoutY="14.0" mnemonicParsing="false" onAction="#checkInfoBtn" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: b2b2b2;" text="User Info">
+                              <ImageView fitHeight="427.0" fitWidth="592.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button layoutX="606.0" layoutY="14.0" mnemonicParsing="false" onAction="#checkInfoBtn" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: b2b2b2;" text="User Info">
                                  <font>
                                     <Font size="15.0" />
                                  </font></Button>
-                              <Button layoutX="560.0" layoutY="350.0" mnemonicParsing="false" onAction="#backToLogin2" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #c94c4c;" text="Log out">
+                              <Button layoutX="606.0" layoutY="367.0" mnemonicParsing="false" onAction="#backToLogin2" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #c94c4c;" text="Log out">
                                  <textFill>
                                     <LinearGradient endX="1.0" endY="1.0">
                                        <stops>
@@ -67,7 +67,7 @@
                   </Tab>
                   <Tab text="Check-Out">
                     <content>
-                        <fx:include source="checkout-view.fxml"/>
+                        <fx:include source="checkout-view.fxml" />
                     </content>
                   </Tab>
                   <Tab text="History">
