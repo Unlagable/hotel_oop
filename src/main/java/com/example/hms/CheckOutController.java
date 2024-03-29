@@ -79,7 +79,7 @@ public class CheckOutController implements Initializable {
         checkOutListTable.setItems(checkOutList);
     }
     public void checkOutBtn(ActionEvent event){
-        if(!(selectRoomNumber.getValue()==null)) {
+        if(!(selectRoomNumber.getValue()==null) && !(checkOutDate.getValue()==null)) {
             for (AllRoomDetail room : Main.unavailableRoomList) {
                 if (room.getRoomTable().getRoomNo().equalsIgnoreCase(selectRoomNumber.getValue())) {
                     room.getRoomTable().setStatus("Available");
@@ -92,19 +92,27 @@ public class CheckOutController implements Initializable {
                     break;
                 }
             }
-            lb_username.setText("");
-            lb_checkindate.setText("");
-            lb_email.setText("");
-            lb_phoneNumber.setText("");
-            lb_roomType.setText("");
-            lb_capacity.setText("");
-            lb_price.setText("");
-            selectRoomNumber.setValue("");
-            checkOutDate.setValue(null);
             refreshBtn();
             System.out.println("succeed");
-        }else System.out.println("This is empty");
+        }else {
+            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+            errorAlert.setTitle("Error Dialog");
+            errorAlert.setHeaderText("Please Enter All Information");
+            errorAlert.showAndWait();
+            System.out.println("error");
+        }
 
+    }
+    public void clearall(){
+        lb_username.setText("");
+        lb_checkindate.setText("");
+        lb_email.setText("");
+        lb_phoneNumber.setText("");
+        lb_roomType.setText("");
+        lb_capacity.setText("");
+        lb_price.setText("");
+        selectRoomNumber.setValue("");
+        checkOutDate.setValue(null);
     }
     public void updateCheckout(AllRoomDetail room, AllRoomDetail updated){
         for (AllRoomDetail list: Main.roomDetails) {
@@ -151,6 +159,6 @@ public class CheckOutController implements Initializable {
 //            System.out.println(room);
         }
     }
-    public void refreshBtn(){getUnavailableRoom();loaddata();}
+    public void refreshBtn(){getUnavailableRoom();loaddata();clearall();}
 
 }

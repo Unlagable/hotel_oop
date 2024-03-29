@@ -61,7 +61,7 @@
                 </Tab>
                   <Tab text="Check-In">
                     <content>
-                      <fx:include source="checkin-view.fxml" />
+                      <fx:include source="Check-Inadmin-view.fxml" />
                     </content>
                   </Tab>
                   <Tab text="Check-Out">

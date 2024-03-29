@@ -133,7 +133,8 @@ public class Main extends Application {
             roomDetails.add(s);
         }
     }
-    public LocalDate readDate(Scanner cs){String s = cs.next() ;
+    public LocalDate readDate(Scanner cs){
+        String s = cs.next() ;
         if (s.equalsIgnoreCase("null")){
             return null;
         }
