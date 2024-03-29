@@ -5,17 +5,17 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="308.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.SceneController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="308.0" style="-fx-background-color: lightyellow;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.SceneController">
    <children>
-      <Label alignment="CENTER" prefHeight="70.0" prefWidth="314.0" text="Welcome to hotel reservation system">
+      <Label alignment="CENTER" prefHeight="70.0" prefWidth="314.0" text="Welcome to Golden Hotel " textFill="#966d14">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
          <VBox.margin>
             <Insets top="10.0" />
          </VBox.margin>
       </Label>
-      <Button mnemonicParsing="false" onAction="#userLogin" prefHeight="71.0" prefWidth="183.0" text="User Log in">
+      <Button fx:id="user" mnemonicParsing="false" onAction="#userLogin" prefHeight="71.0" prefWidth="183.0" style="-fx-background-color: lightblue;" text="User Log in">
          <VBox.margin>
             <Insets bottom="15.0" left="60.0" right="15.0" top="15.0" />
          </VBox.margin>
@@ -23,7 +23,7 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="10.0" layoutY="91.0" mnemonicParsing="false" onAction="#adminLogin" prefHeight="71.0" prefWidth="182.0" text="Admin Log in">
+      <Button fx:id="admin" layoutX="10.0" layoutY="91.0" mnemonicParsing="false" onAction="#adminLogin" prefHeight="71.0" prefWidth="182.0" style="-fx-background-color: #80ced6;" text="Admin Log in">
          <VBox.margin>
             <Insets bottom="15.0" left="60.0" right="15.0" top="15.0" />
          </VBox.margin>

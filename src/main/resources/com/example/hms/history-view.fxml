@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="811.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label alignment="CENTER" contentDisplay="RIGHT" text="Check In &amp; Out History">
+            <VBox.margin>
+                <Insets bottom="10.0" left="200.0" right="10.0" top="15.0" />
+            </VBox.margin>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TableView prefHeight="378.0" prefWidth="701.0">
+            <columns>
+                <TableColumn prefWidth="66.20001220703125" text="Room No" />
+                <TableColumn prefWidth="172.79998779296875" text="Check In" />
+            <TableColumn prefWidth="156.79995727539062" text="Check-Out" />
+                <TableColumn prefWidth="125.60000610351562" text="Name" />
+            <TableColumn prefWidth="165.20001220703125" text="Type" />
+            <TableColumn prefWidth="163.5999755859375" text="Capacity" />
+                <TableColumn prefWidth="121.60000610351562" text="Email" />
+            <TableColumn prefWidth="130.4000244140625" text="Price" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>

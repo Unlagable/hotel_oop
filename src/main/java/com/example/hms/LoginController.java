@@ -6,11 +6,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 
@@ -23,8 +28,12 @@ public class LoginController {
     TextField usernameTextField;
     @FXML
     TextField passwordTextField;
+    @FXML
+    protected Label lb_mess;
     ArrayList<UserDetail> users = new ArrayList<>();
     ArrayList<UserDetail> admin = new ArrayList<>();
+
+    public static UserDetail currentUser = new UserDetail();
 //    File fl = new File("userDetail.txt");
 
 
@@ -51,6 +60,7 @@ public class LoginController {
         String username = usernameTextField.getText();
         String password = passwordTextField.getText();
 
+
         readFile(users,fl);
         checkLogin(event,username,password,fName,users);
 
@@ -60,7 +70,7 @@ public class LoginController {
 
 //        ArrayList<HotelRoomTable> hotel = new ArrayList<>();
         File fl = new File("adminDetail.txt");
-        String fName = "home-view.fxml";
+        String fName = "homeAdmin-view.fxml";
 //        FileOutputStream fos = new FileOutputStream(fl,true);
 //        PrintWriter pw = new PrintWriter(fos);
 //        writeFile(hotel,pw);
@@ -73,17 +83,21 @@ public class LoginController {
 
     }
     public void checkLogin(ActionEvent event, String username, String password, String fName, ArrayList<UserDetail> users) throws IOException {
-
-
         for (UserDetail user:users) {
             System.out.println("check");
-            System.out.println(user);
-            if (user.getUsername().equalsIgnoreCase(username) && user.getPassword().equalsIgnoreCase(password)){
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)){
+                lb_mess.setText("");
+
                 System.out.println("Login Correct");
+                currentUser.setUsername(user.getUsername());
+                currentUser.setPassword(user.getPassword());
+                currentUser.setEmail(user.getEmail());
+                currentUser.setPhoneNum(user.getPhoneNum());
                 getHomeScene(event,fName);
                 break;
             }
             System.out.println("Incorrect Login");
+            lb_mess.setText("Incorrect Login!");
         }
 
     }
@@ -112,10 +126,35 @@ public class LoginController {
         Parent root = FXMLLoader.load(getClass().getResource("firstlogin-view.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+//        scene.getStylesheets().add(getClass().getResource("firstlogin-style.css").toExternalForm());
         stage.setTitle("Hotel Login");
         stage.setScene(scene);
         stage.show();
     }
+    public void backToLogin2(ActionEvent event) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Log out");
+        alert.setHeaderText("You're about to logout!");
 
+        if (alert.showAndWait().get() == ButtonType.OK) {
+            System.out.println("You successfully logged out");
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("firstlogin-view.fxml")));
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+//            scene.getStylesheets().add(getClass().getResource("firstlogin-style.css").toExternalForm());
+            stage.setTitle("Hotel Login");
+            stage.setScene(scene);
+            stage.show();
+        }
+    }
 
+    public void checkInfoBtn(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Userdetail-view.fxml"));
+        Parent root2 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("User Info");
+        stage.setScene(new Scene(root2));
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.show();
+    }
 }

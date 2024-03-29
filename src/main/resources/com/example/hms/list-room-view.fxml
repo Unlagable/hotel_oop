@@ -1,39 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="403.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.ListRoomController">
+<AnchorPane prefHeight="403.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.ListRoomController">
    <children>
-      <BorderPane layoutY="-41.6" prefHeight="442.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-40.0" AnchorPane.topAnchor="-42.0">
-         <top>
-            <Label text="List User" textFill="#a45531" BorderPane.alignment="CENTER">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-         </top>
+      <BorderPane prefHeight="403.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
          <bottom>
-            <HBox alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="674.0" BorderPane.alignment="CENTER_RIGHT">
+            <HBox alignment="CENTER_RIGHT" prefHeight="74.0" prefWidth="709.0" BorderPane.alignment="CENTER_RIGHT">
                <children>
-                  <Button mnemonicParsing="false" onAction="#onTest" text="Button">
+                  <Button mnemonicParsing="false" onAction="#refreshBtn" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: c94c4c;" text="Refresh">
                      <HBox.margin>
                         <Insets right="5.0" />
-                     </HBox.margin></Button>
-                  <Button alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onAddUser" prefHeight="26.0" prefWidth="66.0" text="add User">
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onAddUser" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #deeaee;" text="Add Room">
                      <HBox.margin>
-                        <Insets right="30.0" />
-                     </HBox.margin></Button>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -41,16 +35,16 @@
             </HBox>
          </bottom>
          <center>
-            <TableView fx:id="list_user_tableview" prefHeight="319.0" prefWidth="624.0" BorderPane.alignment="CENTER">
+            <TableView fx:id="list_user_tableview" BorderPane.alignment="CENTER">
               <columns>
-                <TableColumn fx:id="number" minWidth="0.0" prefWidth="75.0" text="Room No: " />
-                <TableColumn fx:id="type" prefWidth="194.39997100830078" text="Type: " />
-                  <TableColumn fx:id="capacity" prefWidth="124.800048828125" text="Capacity" />
-                  <TableColumn fx:id="price" minWidth="0.0" prefWidth="124.0" text="Price: " />
-                  <TableColumn fx:id="status" prefWidth="180.0" text="Status" />
+                <TableColumn fx:id="roomNo" maxWidth="-1.0" minWidth="125.0" prefWidth="-1.0" text="Room No: " />
+                <TableColumn fx:id="type" maxWidth="-1.0" minWidth="125.0" prefWidth="-1.0" text="Type: " />
+                  <TableColumn fx:id="capacity" maxWidth="-1.0" minWidth="125.0" prefWidth="-1.0" text="Capacity" />
+                  <TableColumn fx:id="price" maxWidth="-1.0" minWidth="150.0" prefWidth="-1.0" text="Price: " />
+                  <TableColumn fx:id="status" maxWidth="-1.0" minWidth="150.0" prefWidth="-1.0" text="Status" />
               </columns>
                <BorderPane.margin>
-                  <Insets right="40.0" top="10.0" />
+                  <Insets />
                </BorderPane.margin>
             </TableView>
          </center>
