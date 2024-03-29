@@ -51,7 +51,7 @@ public class HistoryController implements Initializable {
         phoneNumber.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getUser().getPhoneNum()));
         roomType.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getRoomTable().getType()));
         roomCapacity.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getRoomTable().getCapacity()));
-        roomStatus.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getRoomTable().getStatus()));
+//        roomStatus.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getRoomTable().getStatus()));
         price.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getRoomTable().getPrice()));
 
 
