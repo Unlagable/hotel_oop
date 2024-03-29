@@ -124,13 +124,20 @@ public class Main extends Application {
         while (cs.hasNextLine()){
             AllRoomDetail s = new AllRoomDetail();
             s.setCheckInDate(LocalDate.parse(cs.next()));
-            s.setCheckOutDate(cs.next().equalsIgnoreCase("null")? null :LocalDate.parse(cs.next()));
+            s.setCheckOutDate(readDate(cs));
+//            s.setCheckOutDate(cs.next().equalsIgnoreCase("null")? null : LocalDate.parse(cs.next()));
             s.setUser(new UserDetail(cs.next(),"", cs.next(), cs.next()));
             s.setRoomTable(new HotelRoomTable(cs.next(),cs.next(),cs.next(),cs.next(),cs.next()));
             cs.nextLine();
             System.out.println(s);
             roomDetails.add(s);
         }
+    }
+    public LocalDate readDate(Scanner cs){String s = cs.next() ;
+        if (s.equalsIgnoreCase("null")){
+            return null;
+        }
+        return LocalDate.parse(s);
     }
     public static void writeDataOfAllRoom(ArrayList<AllRoomDetail> roomDetails, PrintWriter pw){
         for (AllRoomDetail room:roomDetails) {

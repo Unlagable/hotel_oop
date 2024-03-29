@@ -74,34 +74,44 @@ public class CheckOutController implements Initializable {
 
     }
     private void loaddata(){
+        checkOutList.clear();
         checkOutList.addAll(Main.unavailableRoomList);
         checkOutListTable.setItems(checkOutList);
     }
-
-
-
     public void checkOutBtn(ActionEvent event){
-        for (AllRoomDetail room:Main.unavailableRoomList) {
-            if (room.getRoomTable().getRoomNo().equalsIgnoreCase(selectRoomNumber.getValue())){
-                room.getRoomTable().setStatus("Available");
-                AllRoomDetail roomDetail = new AllRoomDetail(room.getUser(),room.getRoomTable(),room.getCheckInDate(),checkOutDate.getValue());
-                Main.unavailableRoomList.remove(room);
-                findUnavailableRoom(selectRoomNumber.getValue());
-//                Main.roomList.set(Main.unavailableRoomList.indexOf(room) ,roomDetail);
+        if(!(selectRoomNumber.getValue()==null)) {
+            for (AllRoomDetail room : Main.unavailableRoomList) {
+                if (room.getRoomTable().getRoomNo().equalsIgnoreCase(selectRoomNumber.getValue())) {
+                    room.getRoomTable().setStatus("Available");
+                    AllRoomDetail roomDetail = new AllRoomDetail(room.getUser(), room.getRoomTable(), room.getCheckInDate(), checkOutDate.getValue());
+                    findUnavailableRoom(selectRoomNumber.getValue());
+                    updateCheckout(room, roomDetail);
+                    Main.unavailableRoomList.remove(room);
 
-                break;
+
+                    break;
+                }
+            }
+            lb_username.setText("");
+            lb_checkindate.setText("");
+            lb_email.setText("");
+            lb_phoneNumber.setText("");
+            lb_roomType.setText("");
+            lb_capacity.setText("");
+            lb_price.setText("");
+            selectRoomNumber.setValue("");
+            checkOutDate.setValue(null);
+            refreshBtn();
+            System.out.println("succeed");
+        }else System.out.println("This is empty");
+
+    }
+    public void updateCheckout(AllRoomDetail room, AllRoomDetail updated){
+        for (AllRoomDetail list: Main.roomDetails) {
+            if (list.getUser().equals(room.getUser()) && list.getRoomTable().equals(room.getRoomTable()) && list.getCheckInDate().equals(room.getCheckInDate()) && list.getCheckOutDate()==null ){
+                Main.roomDetails.set(Main.roomDetails.indexOf(room),updated);
             }
         }
-        lb_username.setText("");
-        lb_checkindate.setText("");
-        lb_email.setText("");
-        lb_phoneNumber.setText("");
-        lb_roomType.setText("");
-        lb_capacity.setText("");
-        lb_price.setText("");
-        selectRoomNumber.setValue("");
-        checkOutDate.setValue(null);
-
     }
     public void findUnavailableRoom(String x){
         for (HotelRoomTable room:Main.roomList) {
@@ -138,8 +148,9 @@ public class CheckOutController implements Initializable {
         selectRoomNumber.getItems().clear();
         for (AllRoomDetail room: Main.unavailableRoomList){
             selectRoomNumber.getItems().add(room.getRoomTable().getRoomNo());
-            System.out.println(room);
+//            System.out.println(room);
         }
     }
+    public void refreshBtn(){getUnavailableRoom();loaddata();}
 
 }
