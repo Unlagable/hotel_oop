@@ -18,6 +18,13 @@
                             <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="295.0" prefWidth="674.0" styleClass="home-label" stylesheets="@../../../css/home_styles.css">
                                     <children>
+                              <ImageView fitHeight="407.0" fitWidth="556.0" pickOnBounds="true" preserveRatio="true" />
+
+                                        <Label alignment="CENTER" layoutY="-1.0" prefHeight="439.0" prefWidth="680.0" styleClass="home-label" stylesheets="@../../../css/home_styles.css" text="Welcome&#10;to Golden&#10;   Hotel" textFill="#866c0b">
+                                            <font>
+                                                <Font name="System Bold" size="30.0" />
+                                            </font>
+                                        </Label>
                                         <Button layoutX="560.0" layoutY="14.0" mnemonicParsing="false" onAction="#checkInfoBtn" prefHeight="50.0" prefWidth="100.0" styleClass="login-btn" stylesheets="@../../../css/home_styles.css" text="User Info" />
                                         <Button layoutX="560.0" layoutY="350.0" mnemonicParsing="false" onAction="#backToLogin2" prefHeight="50.0" prefWidth="100.0" styleClass="login-btn" stylesheets="@../../../css/home_styles.css" text="Log out">
                                             <textFill>
@@ -37,13 +44,6 @@
                                                 </LinearGradient>
                                             </textFill>
                                         </Button>
-                              <ImageView fitHeight="407.0" fitWidth="556.0" pickOnBounds="true" preserveRatio="true" />
-
-                                        <Label alignment="CENTER" layoutY="-1.0" prefHeight="439.0" prefWidth="560.0" styleClass="home-label" stylesheets="@../../../css/home_styles.css" text="Welcome&#10;to Golden&#10;   Hotel" textFill="#866c0b">
-                                            <font>
-                                                <Font name="System Bold" size="30.0" />
-                                            </font>
-                                        </Label>
                                     </children></AnchorPane>
                             </content>
                         </Tab>
