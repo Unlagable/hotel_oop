@@ -21,9 +21,11 @@
 }
 
 .home-label{
+    -fx-background-color: linear-gradient(to bottom right, #DAA520,#FFD700);
+    -fx-font-size: 50px;
     -fx-font-family: Algerian;
     -fx-background-position: center;
     -fx-background-image: url(../image/img_1.png);
     -fx-background-opacity: 20%;
-    -fx-font-size: 50px;
+
 }
