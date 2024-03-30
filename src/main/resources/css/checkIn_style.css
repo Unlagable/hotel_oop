@@ -10,3 +10,10 @@
     -fx-font-size: 20;
     -fx-color: white;
 }
+.checkOut{
+    -fx-background-image: url(../image/img_2.png);
+}
+.belowText{
+    -fx-font-size: 20;
+    -fx-fill: white;
+}

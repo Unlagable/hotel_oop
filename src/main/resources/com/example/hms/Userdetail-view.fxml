@@ -20,7 +20,7 @@
         </Label>
         <HBox prefHeight="233.0" prefWidth="600.0">
             <children>
-                <HBox prefHeight="191.0" prefWidth="600.0" style="-fx-background-color: #D9D97A;">
+                <HBox prefHeight="191.0" prefWidth="600.0" style="-fx-background-color: #ffef96;">
                     <children>
                         <VBox alignment="CENTER" prefHeight="229.0" prefWidth="410.0" style="-fx-background-color: cream;">
                             <children>
@@ -127,7 +127,7 @@
         </HBox>
         <HBox alignment="CENTER_RIGHT" prefHeight="56.0" prefWidth="600.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#closeBtn" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: crimson;" text="Close" textFill="#302f2f">
+            <Button mnemonicParsing="false" onAction="#closeBtn" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #c94c4c;" text="Close" textFill="#302f2f">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font></Button>

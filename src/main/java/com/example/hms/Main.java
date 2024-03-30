@@ -47,7 +47,6 @@ public class Main extends Application {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("firstlogin-view.fxml"));
             Scene scene = new Scene(root);
-//            scene.getStylesheets().add(getClass().getResource("firstlogin-style.css").toExternalForm());
             stage.setScene(scene);
             stage.setTitle("Hotel Login");
             stage.show();
