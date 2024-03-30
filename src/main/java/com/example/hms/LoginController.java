@@ -3,6 +3,7 @@ package com.example.hms;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -14,12 +15,14 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.*;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.ResourceBundle;
 import java.util.Scanner;
 
 
-public class LoginController {
+public class LoginController implements Initializable {
     public Stage stage;
     public Scene scene;
 
@@ -30,7 +33,8 @@ public class LoginController {
     TextField passwordTextField;
     @FXML
     protected Label lb_mess;
-    ArrayList<UserDetail> users = new ArrayList<>();
+    File fl = new File("userDetail.txt");
+    public static ArrayList<UserDetail> users = new ArrayList<>();
     ArrayList<UserDetail> admin = new ArrayList<>();
 
     public static UserDetail currentUser = new UserDetail();
@@ -52,7 +56,7 @@ public class LoginController {
 
 
 //        ArrayList<HotelRoomTable> hotel = new ArrayList<>();
-        File fl = new File("userDetail.txt");
+
         String fName = "home-view.fxml";
 //        FileOutputStream fos = new FileOutputStream(fl,true);
 //        PrintWriter pw = new PrintWriter(fos);
@@ -62,7 +66,7 @@ public class LoginController {
         String password = passwordTextField.getText();
 
 
-        readFile(users,fl);
+
         checkLogin(event,username,password,fName,users);
 
     }
@@ -108,7 +112,7 @@ public class LoginController {
 //        FileOutputStream fos = new FileOutputStream(fl,true);
 //        PrintWriter pw = new PrintWriter(fos);
 //        writeFile(hotel,pw);
-
+        users.clear();
         Scanner cs  = new Scanner(fl);
         cs.useDelimiter(";|\r\n");
 
@@ -119,7 +123,6 @@ public class LoginController {
             s.setEmail(cs.next());
             s.setPhoneNum(cs.next());
             cs.nextLine();
-            System.out.println(s);
             users.add(s);
         }
 
@@ -165,6 +168,24 @@ public class LoginController {
                 currentUserHistory.add(roomHistory);
                 System.out.println(roomHistory);
             }
+        }
+    }
+    public void signUp(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("userSignUp-view.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+//        scene.getStylesheets().add(getClass().getResource("firstlogin-style.css").toExternalForm());
+        stage.setTitle("Sign Up");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+            readFile(users,fl);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
         }
     }
 }

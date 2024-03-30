@@ -9,6 +9,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -97,17 +99,29 @@ public class ListRoomController implements Initializable {
     @FXML
     private void deleteData(ActionEvent event){
         TableView.TableViewSelectionModel<HotelRoomTable> selectionModel = list_user_tableview.getSelectionModel();
-        if (selectionModel.isEmpty()) System.out.println("select data ");
-        ObservableList<Integer> lists = selectionModel.getSelectedIndices();
-        Integer[] selectionIndices = new Integer[lists.size()];
-        selectionIndices = lists.toArray(selectionIndices);
+        if (selectionModel.isEmpty()) {
+            Alert noInfoAlert = new Alert(Alert.AlertType.ERROR);
+            noInfoAlert.setTitle("No Information Selected");
+            noInfoAlert.setContentText("Please Select Before Delete!!");
+            noInfoAlert.showAndWait();
+        }else {
+            Alert noInfoAlert = new Alert(Alert.AlertType.CONFIRMATION);
+            noInfoAlert.setTitle("Delete Item");
+            noInfoAlert.setHeaderText("Are You Sure?");
+            noInfoAlert.setContentText("Do You Want To Delete Selected Item?");
+            if (noInfoAlert.showAndWait().get() == ButtonType.OK) {
+                ObservableList<Integer> lists = selectionModel.getSelectedIndices();
+                Integer[] selectionIndices = new Integer[lists.size()];
+                selectionIndices = lists.toArray(selectionIndices);
 
-        Arrays.sort(selectionIndices);
+                Arrays.sort(selectionIndices);
 
-        Main.roomList.remove(list_user_tableview.getSelectionModel().getSelectedIndex());
-        for (int i = selectionIndices.length -1 ; i >= 0; i--) {
-            selectionModel.clearSelection(selectionIndices[i]);
-            list_user_tableview.getItems().remove(selectionIndices[i].intValue());
+                Main.roomList.remove(list_user_tableview.getSelectionModel().getSelectedIndex());
+                for (int i = selectionIndices.length - 1; i >= 0; i--) {
+                    selectionModel.clearSelection(selectionIndices[i]);
+                    list_user_tableview.getItems().remove(selectionIndices[i].intValue());
+                }
+            }
 
         }
     }
