@@ -7,9 +7,9 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="376.0" prefWidth="416.0" styleClass="home-label" stylesheets="@../../../css/home_styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.SceneController">
    <children>
-      <Label alignment="CENTER" prefHeight="70.0" prefWidth="428.0" text="Welcome to Golden Hotel " textFill="#966d14">
+      <Label alignment="CENTER" prefHeight="70.0" prefWidth="428.0" text="Welcome to Golden Hotel " textFill="#a17411">
          <font>
-            <Font name="System Bold" size="20.0" />
+            <Font name="Segoe UI Bold" size="25.0" />
          </font>
          <VBox.margin>
             <Insets top="10.0" />

@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="567.0" prefWidth="780.0" AnchorPane.topAnchor="42.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.CheckInController">
+<AnchorPane prefHeight="567.0" prefWidth="780.0" styleClass="box" stylesheets="@../../../css/checkIn_style.css" AnchorPane.topAnchor="42.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.CheckInController">
     <children>
         <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
             <image>
@@ -20,13 +29,13 @@
         </Label>
         <AnchorPane layoutY="54.0" prefHeight="496.0" prefWidth="770.0">
             <children>
-                <TableView fx:id="list_room_tableview" layoutX="10.0" layoutY="10.0" prefHeight="217.0" prefWidth="758.0" AnchorPane.bottomAnchor="284.4" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="10.0">
+                <TableView fx:id="list_room_tableview" layoutX="-1.6" layoutY="10.0" prefHeight="201.0" prefWidth="782.0" AnchorPane.bottomAnchor="285.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-9.0" AnchorPane.topAnchor="10.0">
                     <columns>
-                        <TableColumn fx:id="roomNo" prefWidth="150.0" text="Room Number" />
-                        <TableColumn fx:id="type" prefWidth="150.0" text="Room Type" />
-                        <TableColumn fx:id="capacity" prefWidth="139.0" text="Room Capacity" />
-                  <TableColumn fx:id="price" prefWidth="139.0" text="Price" />
-                        <TableColumn fx:id="status" prefWidth="176.199951171875" text="Status" />
+                        <TableColumn fx:id="roomNo" prefWidth="76.00000035762787" text="Room No" />
+                        <TableColumn fx:id="type" prefWidth="230.39993286132812" text="Room Type" />
+                        <TableColumn fx:id="capacity" prefWidth="176.800048828125" text="Room Capacity" />
+                  <TableColumn fx:id="price" prefWidth="121.5999755859375" text="Price" />
+                        <TableColumn fx:id="status" prefWidth="177.60003662109375" text="Status" />
                     </columns>
                 </TableView>
                 <VBox alignment="CENTER" layoutX="10.0" layoutY="238.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="273.0" prefWidth="758.0" AnchorPane.bottomAnchor="0.39999999999997726" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="222.0">
@@ -39,9 +48,9 @@
                                             <children>
                                                 <HBox prefHeight="43.0" prefWidth="600.0">
                                                     <children>
-                                                        <Label prefHeight="29.0" prefWidth="140.0" text="Customer Name:">
+                                                        <Label prefHeight="30.0" prefWidth="153.0" text="Customer Name:" textFill="#faf7f7">
                                                             <font>
-                                                                <Font size="18.0" />
+                                                                <Font size="20.0" />
                                                             </font>
                                                             <HBox.margin>
                                                                 <Insets bottom="10.0" left="30.0" right="10.0" />
@@ -52,35 +61,35 @@
                                                 </HBox>
                                                 <HBox layoutX="10.0" layoutY="10.0" prefHeight="43.0" prefWidth="600.0">
                                                     <children>
-                                                        <Label prefHeight="30.0" prefWidth="150.0" text="Phone Number:">
+                                                        <Label prefHeight="30.0" prefWidth="150.0" text="Phone Number:" textFill="#f4efef">
                                                             <font>
-                                                                <Font size="18.0" />
+                                                                <Font size="20.0" />
                                                             </font>
                                                             <HBox.margin>
                                                                 <Insets bottom="10.0" left="30.0" right="10.0" />
                                                             </HBox.margin>
                                                         </Label>
-                                          <TextField fx:id="txt_phoneNum" />
+                                          <TextField fx:id="txt_phoneNum" prefHeight="26.0" prefWidth="154.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox layoutX="10.0" layoutY="53.0" prefHeight="43.0" prefWidth="600.0">
                                                     <children>
-                                                        <Label prefHeight="30.0" prefWidth="139.0" text="E-mail :">
+                                                        <Label prefHeight="30.0" prefWidth="149.0" text="E-mail :" textFill="#efe9e9">
                                                             <font>
-                                                                <Font size="18.0" />
+                                                                <Font size="20.0" />
                                                             </font>
                                                             <HBox.margin>
                                                                 <Insets bottom="10.0" left="30.0" right="10.0" />
                                                             </HBox.margin>
                                                         </Label>
-                                          <TextField fx:id="txt_email" />
+                                          <TextField fx:id="txt_email" prefHeight="26.0" prefWidth="155.0" />
                                                     </children>
                                                 </HBox>
                                                 <HBox layoutX="10.0" layoutY="96.0" prefHeight="57.0" prefWidth="379.0">
                                        <children>
-                                                  <Label alignment="TOP_CENTER" text="Check-In Date:">
+                                                  <Label alignment="TOP_CENTER" text="Check-In Date:" textFill="#f7f4f4">
                                                       <font>
-                                                          <Font size="18.0" />
+                                                          <Font name="System Bold" size="20.0" />
                                                       </font>
                                                       <HBox.margin>
                                                           <Insets bottom="10.0" left="30.0" top="20.0" />
@@ -103,9 +112,9 @@
                                             <children>
                                                 <HBox prefHeight="43.0" prefWidth="600.0">
                                                     <children>
-                                                        <Label prefHeight="30.0" prefWidth="141.0" text="Room Number:">
+                                                        <Label prefHeight="30.0" prefWidth="141.0" text="Room Number:" textFill="#f4eeee">
                                                             <font>
-                                                                <Font size="18.0" />
+                                                                <Font size="20.0" />
                                                             </font>
                                                             <HBox.margin>
                                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -120,9 +129,9 @@
                                                 </HBox>
                                                 <HBox prefHeight="32.0" prefWidth="271.0">
                                                     <children>
-                                                        <Label prefHeight="37.0" prefWidth="125.0" text="Room Type:">
+                                                        <Label prefHeight="37.0" prefWidth="125.0" text="Room Type:" textFill="#fcf9f9">
                                                             <font>
-                                                                <Font size="18.0" />
+                                                                <Font size="20.0" />
                                                             </font>
                                                             <HBox.margin>
                                                                 <Insets right="10.0" />
@@ -131,7 +140,7 @@
                                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="7.0" />
                                                             </padding>
                                                         </Label>
-                                                        <Label fx:id="lb_roomType" prefHeight="22.0" prefWidth="166.0">
+                                                        <Label fx:id="lb_roomType" prefHeight="22.0" prefWidth="166.0" styleClass="fillIn" stylesheets="@../../../css/checkIn_style.css">
                                                             <HBox.margin>
                                                                 <Insets top="5.0" />
                                                             </HBox.margin>
@@ -140,9 +149,9 @@
                                                 </HBox>
                                                 <HBox layoutX="10.0" layoutY="53.0" prefHeight="43.0" prefWidth="600.0">
                                                     <children>
-                                                        <Label prefHeight="22.0" prefWidth="99.0" text="Capacity:">
+                                                        <Label prefHeight="22.0" prefWidth="99.0" text="Capacity:" textFill="#f2ecec">
                                                             <font>
-                                                                <Font size="18.0" />
+                                                                <Font size="20.0" />
                                                             </font>
                                                             <HBox.margin>
                                                                 <Insets bottom="10.0" left="5.0" right="10.0" />
@@ -151,7 +160,7 @@
                                                                 <Insets top="7.0" />
                                                             </padding>
                                                         </Label>
-                                                        <Label fx:id="lb_capacity" prefHeight="10.0" prefWidth="160.0">
+                                                        <Label fx:id="lb_capacity" prefHeight="10.0" prefWidth="160.0" styleClass="fillIn" stylesheets="@../../../css/checkIn_style.css">
                                                             <HBox.margin>
                                                                 <Insets top="5.0" />
                                                             </HBox.margin>
@@ -163,15 +172,15 @@
                                                 </HBox>
                                                 <HBox layoutX="10.0" layoutY="90.0" prefHeight="43.0" prefWidth="600.0">
                                                     <children>
-                                                        <Label prefHeight="22.0" prefWidth="99.0" text="Price:">
+                                                        <Label prefHeight="22.0" prefWidth="99.0" text="Price:" textFill="#fcf9f9">
                                                             <font>
-                                                                <Font size="18.0" />
+                                                                <Font size="20.0" />
                                                             </font>
                                                             <HBox.margin>
                                                                 <Insets bottom="10.0" left="5.0" right="10.0" />
                                                             </HBox.margin>
                                                         </Label>
-                                                        <Label fx:id="lb_price" prefHeight="10.0" prefWidth="160.0">
+                                                        <Label fx:id="lb_price" prefHeight="10.0" prefWidth="160.0" styleClass="fillIn" stylesheets="@../../../css/checkIn_style.css">
                                                             <HBox.margin>
                                                                 <Insets top="5.0" />
                                                             </HBox.margin>

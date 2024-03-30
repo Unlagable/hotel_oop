@@ -6,3 +6,7 @@
 .button{
     -fx-background-color: lightblue;
 }
+.fillIn{
+    -fx-font-size: 20;
+    -fx-color: white;
+}
