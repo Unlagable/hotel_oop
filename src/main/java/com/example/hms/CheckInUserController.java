@@ -3,13 +3,12 @@ package com.example.hms;
 import javafx.beans.Observable;
 import javafx.beans.value.ObservableSetValue;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
 import java.time.LocalDate;
@@ -17,6 +16,19 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class CheckInUserController implements Initializable {
+    ObservableList<HotelRoomTable> list_Room = FXCollections.observableArrayList();
+    @FXML
+    private TableView<HotelRoomTable> list_room_tableview;
+    @FXML
+    private TableColumn<HotelRoomTable,String> roomNo;
+    @FXML
+    private TableColumn<HotelRoomTable,String> type;
+    @FXML
+    private TableColumn<HotelRoomTable,String> capacity;
+    @FXML
+    private TableColumn<HotelRoomTable,String> price;
+    @FXML
+    private TableColumn<HotelRoomTable,String> status;
     @FXML
     private Label lb_username;
     @FXML
@@ -62,6 +74,8 @@ public class CheckInUserController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        initeCols();
+        loadData();
         getAvailableRoom();
         getCurrentUser();
 //        Main.availableRoomList.removeIf(roomN -> roomN.getStatus().equalsIgnoreCase("Unavailable"));
@@ -83,6 +97,17 @@ public class CheckInUserController implements Initializable {
             roomNum.getItems().add(roomN.getRoomNo());
         }
     }
-
+    private void initeCols(){
+        roomNo.setCellValueFactory(new PropertyValueFactory<>("roomNo"));
+        type.setCellValueFactory(new PropertyValueFactory<>("type"));
+        capacity.setCellValueFactory(new PropertyValueFactory<>("capacity"));
+        price.setCellValueFactory(new PropertyValueFactory<>("price"));
+        status.setCellValueFactory(new PropertyValueFactory<>("status"));
+    }
+    private void loadData(){
+        list_Room.clear();
+        list_Room.addAll(Main.availableRoomList);
+        list_room_tableview.setItems(list_Room);
+    }
 
 }

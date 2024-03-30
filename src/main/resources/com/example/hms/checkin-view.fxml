@@ -19,15 +19,15 @@
             </Label>
          </children>
       </HBox>
-      <VBox VBox.vgrow="ALWAYS">
+      <VBox prefHeight="230.0" prefWidth="717.0" VBox.vgrow="ALWAYS">
          <children>
-            <TableView opacity="0.69" prefHeight="323.0" prefWidth="718.0" VBox.vgrow="ALWAYS">
+            <TableView fx:id="list_room_tableview" opacity="0.69" prefHeight="323.0" prefWidth="718.0" VBox.vgrow="ALWAYS">
               <columns>
-                <TableColumn prefWidth="75.0" text="Room No: " />
-                <TableColumn prefWidth="196.8000030517578" text="Room Type: " />
-                  <TableColumn prefWidth="136.79998779296875" text="Room Capacity:" />
-                  <TableColumn prefWidth="163.20001220703125" text="Room Price:" />
-                  <TableColumn prefWidth="141.99993896484375" text="Room Status:" />
+                <TableColumn fx:id="roomNo" prefWidth="102.79998475313187" text="Room No: " />
+                <TableColumn fx:id="type" prefWidth="204.40000915527344" text="Room Type: " />
+                  <TableColumn fx:id="capacity" prefWidth="147.0" text="Room Capacity:" />
+                  <TableColumn fx:id="price" prefWidth="121.0" text="Room Price:" />
+                  <TableColumn fx:id="status" prefWidth="141.99993896484375" text="Room Status:" />
               </columns>
             </TableView>
          </children>
@@ -212,9 +212,9 @@
             </HBox>
          </children>
       </HBox>
-      <HBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="717.0" VBox.vgrow="ALWAYS">
+      <HBox alignment="TOP_CENTER" prefHeight="56.0" prefWidth="717.0" VBox.vgrow="ALWAYS">
          <children>
-            <HBox alignment="CENTER" layoutX="368.0" layoutY="10.0" prefHeight="74.0" prefWidth="487.0" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER" layoutX="368.0" layoutY="10.0" prefHeight="103.0" prefWidth="504.0" HBox.hgrow="ALWAYS">
                <children>
                   <Label alignment="TOP_CENTER" text="Check-In Date:" textFill="#f4f1f1">
                      <font>
@@ -234,7 +234,7 @@
                   <Insets />
                </HBox.margin>
             </HBox>
-            <HBox alignment="CENTER_RIGHT" prefHeight="74.0" prefWidth="191.0" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER" prefHeight="74.0" prefWidth="196.0" HBox.hgrow="ALWAYS">
                <children>
                   <Button mnemonicParsing="false" onAction="#checkInBtn" prefHeight="49.0" prefWidth="164.0" stylesheets="@../../../css/checkIn_style.css" text="Check-In">
                      <font>
