@@ -25,6 +25,7 @@ public class Main extends Application {
 
     File fl = new File("roomListTable.txt");
     File roomDetailFile = new File("roomDetailFile.txt");
+    File userFile = new File("userDetail.txt");
     FileOutputStream fos;
     FileOutputStream fox;
 
@@ -71,17 +72,22 @@ public class Main extends Application {
             System.out.println("You successfully logged out");
             FileOutputStream fos = null;
             FileOutputStream fox = null;
+            FileOutputStream foa = null;
+
 
             try {
                 fos = new FileOutputStream(fl,false);
                 fox = new FileOutputStream(roomDetailFile,false);
+                foa = new FileOutputStream(userFile,false);
             } catch (FileNotFoundException e) {
                 throw new RuntimeException(e);
             }
             PrintWriter pw = new PrintWriter(fos);
             PrintWriter px = new PrintWriter(fox);
+            PrintWriter pr = new PrintWriter(foa);
             writeFile(roomList,pw);
             writeDataOfAllRoom(roomDetails,px);
+            writeUserFile(LoginController.users,pr);
             stage.close();
         }
     }
@@ -110,6 +116,12 @@ public class Main extends Application {
             rooms.add(s);
         }
 
+    }
+    public static void writeUserFile(ArrayList<UserDetail> users, PrintWriter pw){
+        for (UserDetail user:users) {
+            pw.println(user.getUsername()+";"+user.getPassword()+";"+user.getEmail()+";"+user.getPhoneNum());
+        }
+        pw.close();
     }
     public static void writeFile(ArrayList<HotelRoomTable> rooms, PrintWriter pw){
         for (HotelRoomTable room:rooms) {
