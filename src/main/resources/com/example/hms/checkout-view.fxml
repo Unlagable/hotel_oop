@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="635.0" prefWidth="776.0" AnchorPane.topAnchor="42.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.CheckOutController">
+<AnchorPane prefHeight="687.0" prefWidth="866.0" styleClass="checkOut" stylesheets="@../../../css/checkIn_style.css" AnchorPane.topAnchor="42.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.CheckOutController">
    <children>
       <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../image/cart-checkout.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="46.0" layoutY="12.0" text="Check Out" AnchorPane.leftAnchor="46.0">
+      <Label layoutX="60.0" layoutY="8.0" prefHeight="45.0" prefWidth="122.0" text="Check Out" AnchorPane.leftAnchor="60.0">
          <font>
-            <Font name="AKbalthom HighSchool" size="22.0" />
+            <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <AnchorPane layoutY="54.0" prefHeight="575.0" prefWidth="769.0">
+      <AnchorPane layoutY="58.0" prefHeight="626.0" prefWidth="864.0">
          <children>
-            <TableView fx:id="checkOutListTable" layoutX="10.0" layoutY="10.0" prefHeight="217.0" prefWidth="758.0">
+            <TableView fx:id="checkOutListTable" layoutX="-5.6" layoutY="14.0" prefHeight="226.0" prefWidth="884.0" AnchorPane.bottomAnchor="388.4" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="-14.0" AnchorPane.topAnchor="13.599999999999937">
                <columns>
-                  <TableColumn fx:id="roomNumber" prefWidth="150.0" text="Room Number" />
-                  <TableColumn fx:id="username" prefWidth="150.0" text="Customer Name" />
-                  <TableColumn fx:id="checkInDate" prefWidth="139.0" text="Checked In" />
+                  <TableColumn fx:id="roomNumber" prefWidth="70.40002745389938" text="Room No:" />
+                  <TableColumn fx:id="username" prefWidth="181.5999755859375" text="Customer Name" />
+                  <TableColumn fx:id="checkInDate" prefWidth="187.99998474121094" text="Checked-In Date" />
                   <TableColumn fx:id="email" prefWidth="64.0" text="Nº" />
-                  <TableColumn fx:id="price" prefWidth="100.0" text="Price" />
-                  <TableColumn fx:id="roomStatus" prefWidth="151.0" text="Status" />
+                  <TableColumn fx:id="price" prefWidth="142.39993286132812" text="Price" />
+                  <TableColumn fx:id="roomStatus" prefWidth="212.79998779296875" text="Status" />
                </columns>
             </TableView>
             <VBox layoutX="10.0" layoutY="238.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="758.0">
@@ -38,83 +46,98 @@
                            <children>
                               <VBox prefHeight="171.0" prefWidth="600.0">
                                  <children>
-                                    <HBox prefHeight="43.0" prefWidth="600.0">
+                                    <HBox prefHeight="43.0" prefWidth="600.0" styleClass="belowText" stylesheets="@../../../css/checkIn_style.css">
                                        <children>
-                                          <Label prefHeight="29.0" prefWidth="140.0" text="Customer Name:">
+                                          <Label prefHeight="30.0" prefWidth="159.0" text="Customer Name:" textFill="#fcf5f5">
                                              <font>
-                                                <Font size="18.0" />
+                                                <Font size="20.0" />
                                              </font>
                                              <HBox.margin>
                                                 <Insets bottom="10.0" left="30.0" right="10.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <Label fx:id="lb_username" prefHeight="31.0" prefWidth="194.0">
+                                          <Label fx:id="lb_username" prefHeight="26.0" prefWidth="182.0" textFill="WHITE">
                                              <HBox.margin>
-                                                <Insets />
+                                                <Insets bottom="5.0" />
                                              </HBox.margin>
                                              <padding>
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </padding>
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
                                           </Label>
                                        </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
                                     </HBox>
                                     <HBox layoutX="10.0" layoutY="10.0" prefHeight="43.0" prefWidth="600.0">
                                        <children>
-                                          <Label prefHeight="29.0" prefWidth="97.0" text="Checked in:">
+                                          <Label prefHeight="30.0" prefWidth="111.0" text="Checked in:" textFill="#f7f6f6">
                                              <font>
-                                                      <Font size="18.0" />
+                                                      <Font size="20.0" />
                                              </font>
                                              <HBox.margin>
                                                 <Insets bottom="10.0" left="30.0" right="10.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <Label fx:id="lb_checkindate" prefHeight="31.0" prefWidth="194.0">
+                                          <Label fx:id="lb_checkindate" prefHeight="37.0" prefWidth="194.0" textFill="WHITE">
                                              <HBox.margin>
-                                                <Insets />
+                                                <Insets bottom="5.0" />
                                              </HBox.margin>
                                              <padding>
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </padding>
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
                                           </Label>
                                        </children>
                                     </HBox>
                                     <HBox layoutX="10.0" layoutY="53.0" prefHeight="43.0" prefWidth="600.0">
                                        <children>
-                                          <Label prefHeight="30.0" prefWidth="39.0" text="Nº :">
+                                          <Label prefHeight="30.0" prefWidth="39.0" text="Nº :" textFill="#fcf6f6">
                                              <font>
-                                                <Font size="18.0" />
+                                                <Font size="20.0" />
                                              </font>
                                              <HBox.margin>
                                                 <Insets bottom="10.0" left="30.0" right="10.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <Label fx:id="lb_email" prefHeight="31.0" prefWidth="194.0">
+                                          <Label fx:id="lb_email" prefHeight="38.0" prefWidth="194.0" textFill="WHITE">
                                              <HBox.margin>
                                                 <Insets />
                                              </HBox.margin>
                                              <padding>
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </padding>
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
                                           </Label>
                                        </children>
                                     </HBox>
                                     <HBox layoutX="10.0" layoutY="96.0" prefHeight="43.0" prefWidth="600.0">
                                        <children>
-                                          <Label prefHeight="30.0" prefWidth="80.0" text="Address: ">
+                                          <Label prefHeight="30.0" prefWidth="95.0" text="Address: " textFill="#fcf9f9">
                                              <font>
-                                                <Font size="18.0" />
+                                                <Font size="20.0" />
                                              </font>
                                              <HBox.margin>
                                                 <Insets bottom="10.0" left="30.0" right="10.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <Label fx:id="lb_phoneNumber" prefHeight="31.0" prefWidth="251.0">
+                                          <Label fx:id="lb_phoneNumber" prefHeight="31.0" prefWidth="251.0" textFill="WHITE">
                                              <HBox.margin>
-                                                <Insets />
+                                                <Insets top="5.0" />
                                              </HBox.margin>
                                              <padding>
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                              </padding>
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
                                           </Label>
                                        </children>
                                     </HBox>
@@ -128,9 +151,9 @@
                                  <children>
                                     <HBox prefHeight="43.0" prefWidth="600.0">
                                        <children>
-                                          <Label prefHeight="30.0" prefWidth="141.0" text="Room Number:">
+                                          <Label prefHeight="30.0" prefWidth="141.0" text="Room Number:" textFill="WHITE">
                                              <font>
-                                                <Font size="18.0" />
+                                                <Font size="20.0" />
                                              </font>
                                              <HBox.margin>
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -145,9 +168,9 @@
                                     </HBox>
                                     <HBox prefHeight="32.0" prefWidth="271.0">
                                        <children>
-                                          <Label prefHeight="37.0" prefWidth="125.0" text="Room Type:">
+                                          <Label prefHeight="37.0" prefWidth="125.0" text="Room Type:" textFill="WHITE">
                                              <font>
-                                                <Font size="18.0" />
+                                                <Font size="20.0" />
                                              </font>
                                              <HBox.margin>
                                                 <Insets right="10.0" />
@@ -156,18 +179,21 @@
                                                 <Insets bottom="5.0" left="5.0" right="5.0" top="7.0" />
                                              </padding>
                                           </Label>
-                                          <Label fx:id="lb_roomType" prefHeight="22.0" prefWidth="166.0">
+                                          <Label fx:id="lb_roomType" prefHeight="22.0" prefWidth="166.0" textFill="WHITE">
                                              <HBox.margin>
                                                 <Insets top="5.0" />
                                              </HBox.margin>
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
                                           </Label>
                                        </children>
                                     </HBox>
                                     <HBox layoutX="10.0" layoutY="53.0" prefHeight="43.0" prefWidth="600.0">
                                        <children>
-                                          <Label prefHeight="22.0" prefWidth="99.0" text="Capacity:">
+                                          <Label prefHeight="22.0" prefWidth="99.0" text="Capacity:" textFill="WHITE">
                                              <font>
-                                                <Font size="18.0" />
+                                                <Font size="20.0" />
                                              </font>
                                              <HBox.margin>
                                                 <Insets bottom="10.0" left="5.0" right="10.0" />
@@ -176,37 +202,46 @@
                                                 <Insets top="7.0" />
                                              </padding>
                                           </Label>
-                                          <Label fx:id="lb_capacity" prefHeight="10.0" prefWidth="160.0">
+                                          <Label fx:id="lb_capacity" prefHeight="10.0" prefWidth="160.0" textFill="WHITE">
                                              <HBox.margin>
                                                 <Insets top="5.0" />
                                              </HBox.margin>
                                              <padding>
                                                 <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                                              </padding>
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
                                           </Label>
                                        </children>
                                     </HBox>
                                     <HBox layoutX="10.0" layoutY="90.0" prefHeight="43.0" prefWidth="600.0">
                                        <children>
-                                          <Label prefHeight="22.0" prefWidth="99.0" text="Price:">
+                                          <Label prefHeight="22.0" prefWidth="99.0" text="Price:" textFill="WHITE">
                                              <font>
-                                                <Font size="18.0" />
+                                                <Font size="20.0" />
                                              </font>
                                              <HBox.margin>
                                                 <Insets bottom="10.0" left="5.0" right="10.0" />
                                              </HBox.margin>
                                           </Label>
-                                          <Label fx:id="lb_price" prefHeight="10.0" prefWidth="160.0">
+                                          <Label fx:id="lb_price" prefHeight="10.0" prefWidth="160.0" textFill="WHITE">
                                              <HBox.margin>
                                                 <Insets top="5.0" />
                                              </HBox.margin>
                                              <padding>
                                                 <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                                              </padding>
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
                                           </Label>
                                        </children>
                                     </HBox>
                                  </children>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
                               </VBox>
                            </children>
                         </HBox>
@@ -214,9 +249,9 @@
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label alignment="TOP_CENTER" text="Check-Out Date:">
+                        <Label alignment="TOP_CENTER" text="Check-Out Date:" textFill="#fcfafa">
                            <font>
-                              <Font size="18.0" />
+                              <Font size="25.0" />
                            </font>
                            <HBox.margin>
                               <Insets bottom="10.0" left="30.0" top="20.0" />
@@ -229,7 +264,7 @@
                         </DatePicker>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="715.0">
                      <children>
                         <Button mnemonicParsing="false" onAction="#refreshBtn" prefHeight="51.0" prefWidth="108.0" text="Refresh">
                            <font>

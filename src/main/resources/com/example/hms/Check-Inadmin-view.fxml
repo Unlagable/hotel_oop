@@ -24,12 +24,12 @@
         </ImageView>
         <Label layoutX="64.0" layoutY="15.0" text="Check In" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="15.0">
             <font>
-                <Font name="AKbalthom HighSchool" size="22.0" />
+                <Font name="System Bold" size="25.0" />
             </font>
         </Label>
         <AnchorPane layoutY="54.0" prefHeight="496.0" prefWidth="770.0">
             <children>
-                <TableView fx:id="list_room_tableview" layoutX="-1.6" layoutY="10.0" prefHeight="201.0" prefWidth="782.0" AnchorPane.bottomAnchor="285.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-9.0" AnchorPane.topAnchor="10.0">
+                <TableView fx:id="list_room_tableview" accessibleRole="IMAGE_VIEW" layoutX="-1.6" layoutY="10.0" prefHeight="201.0" prefWidth="782.0" AnchorPane.bottomAnchor="285.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-9.0" AnchorPane.topAnchor="10.0">
                     <columns>
                         <TableColumn fx:id="roomNo" prefWidth="76.00000035762787" text="Room No" />
                         <TableColumn fx:id="type" prefWidth="230.39993286132812" text="Room Type" />
