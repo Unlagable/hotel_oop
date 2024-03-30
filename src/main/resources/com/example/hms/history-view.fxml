@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="811.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" prefHeight="396.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.HistoryUserController">
     <children>
         <Label alignment="CENTER" contentDisplay="RIGHT" text="Check In &amp; Out History">
             <VBox.margin>
-                <Insets bottom="10.0" left="200.0" right="10.0" top="15.0" />
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </VBox.margin>
             <padding>
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -18,17 +18,18 @@
                 <Font size="18.0" />
             </font>
         </Label>
-        <TableView prefHeight="378.0" prefWidth="701.0">
+        <TableView fx:id="userHistoryListTable" prefHeight="329.0" prefWidth="884.0" VBox.vgrow="ALWAYS">
             <columns>
-                <TableColumn prefWidth="66.20001220703125" text="Room No" />
-                <TableColumn prefWidth="172.79998779296875" text="Check In" />
-            <TableColumn prefWidth="156.79995727539062" text="Check-Out" />
-                <TableColumn prefWidth="125.60000610351562" text="Name" />
-            <TableColumn prefWidth="165.20001220703125" text="Type" />
-            <TableColumn prefWidth="163.5999755859375" text="Capacity" />
-                <TableColumn prefWidth="121.60000610351562" text="Email" />
-            <TableColumn prefWidth="130.4000244140625" text="Price" />
+                <TableColumn fx:id="roomNumber" maxWidth="118.19998008012772" minWidth="67.1" prefWidth="113.19998008012772" text="Room Number" />
+                <TableColumn fx:id="checkInDate" maxWidth="195.60004425048828" minWidth="122.5999984741211" prefWidth="195.60004425048828" text="Check In" />
+            <TableColumn fx:id="checkOutDate" maxWidth="199.0" minWidth="122.5999984741211" prefWidth="195.60004425048828" text="Check-Out" />
+            <TableColumn fx:id="roomType" maxWidth="175.80001831054688" minWidth="105.60006713867188" prefWidth="135.60006713867188" text="Type" />
+            <TableColumn fx:id="roomCapacity" maxWidth="158.0" minWidth="108.4000244140625" prefWidth="116.4000244140625" text="Capacity" />
+            <TableColumn fx:id="roomPrice" maxWidth="133.5999877929687" minWidth="87.5999755859375" prefWidth="133.5999877929687" text="Price" />
             </columns>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
         </TableView>
     </children>
 </VBox>

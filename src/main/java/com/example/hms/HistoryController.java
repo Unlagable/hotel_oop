@@ -36,10 +36,6 @@ public class HistoryController implements Initializable {
     @FXML
     private TableColumn<AllRoomDetail,String> roomCapacity;
     @FXML
-    private TableColumn<AllRoomDetail,String> roomPrice;
-    @FXML
-    private TableColumn<AllRoomDetail,String> roomStatus;
-    @FXML
     private TableColumn<AllRoomDetail,String> price;
 
     private void initeCols(){

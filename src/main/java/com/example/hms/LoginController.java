@@ -34,6 +34,7 @@ public class LoginController {
     ArrayList<UserDetail> admin = new ArrayList<>();
 
     public static UserDetail currentUser = new UserDetail();
+    public static ArrayList<AllRoomDetail> currentUserHistory = new ArrayList<>();
 //    File fl = new File("userDetail.txt");
 
 
@@ -93,6 +94,7 @@ public class LoginController {
                 currentUser.setPassword(user.getPassword());
                 currentUser.setEmail(user.getEmail());
                 currentUser.setPhoneNum(user.getPhoneNum());
+                getCurrentUserHistory();
                 getHomeScene(event,fName);
                 break;
             }
@@ -156,5 +158,13 @@ public class LoginController {
         stage.setScene(new Scene(root2));
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.show();
+    }
+    public void getCurrentUserHistory(){
+        for (AllRoomDetail roomHistory: Main.roomDetails) {
+            if (roomHistory.getUser().getUsername().equals(currentUser.getUsername())){
+                currentUserHistory.add(roomHistory);
+                System.out.println(roomHistory);
+            }
+        }
     }
 }
