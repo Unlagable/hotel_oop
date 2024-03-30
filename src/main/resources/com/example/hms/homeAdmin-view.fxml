@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 
-<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.LoginController">
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.LoginController">
    <children>
       <AnchorPane prefHeight="118.0" prefWidth="746.0" styleClass="banner" stylesheets="@../../../css/homeAdmin_style.css" />
       <StackPane VBox.vgrow="ALWAYS">
@@ -24,7 +17,7 @@
                   <content>
                     <AnchorPane minHeight="-Infinity" minWidth="-Infinity">
                            <children>
-                              <Label alignment="CENTER" layoutY="-8.0" prefHeight="470.0" prefWidth="720.0" styleClass="home-label" stylesheets="@../../../css/homeAdmin_style.css" text="Welcome&#10;to Golden&#10;   Hotel" textFill="#b99814" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <Label alignment="CENTER" layoutY="-8.0" prefHeight="470.0" prefWidth="720.0" styleClass="home-label" stylesheets="@../../../css/homeAdmin_style.css" text="Welcome&#10;to Golden&#10;   Hotel" textFill="#cfad28" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <font>
                                     <Font name="System Bold" size="30.0" />
                                  </font>
