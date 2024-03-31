@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="726.0" spacing="10.0" styleClass="box" stylesheets="@../../../css/checkIn_style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.CheckInUserController">
+<VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="726.0" spacing="10.0" styleClass="box" stylesheets="@../../../css/checkIn_style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.CheckInUserController">
    <children>
       <HBox alignment="CENTER" prefHeight="11.0" prefWidth="717.0">
          <children>
@@ -32,13 +32,13 @@
             </TableView>
          </children>
       </VBox>
-      <HBox alignment="CENTER" prefHeight="182.0" prefWidth="717.0" style="-fx-background-color: rgba(0, 0, 0,0.5); -fx-background-radius: 25;" styleClass="fillIn" stylesheets="@../../../css/checkIn_style.css">
+      <HBox alignment="CENTER" prefHeight="258.0" prefWidth="717.0" style="-fx-background-color: rgba(0, 0, 0,0.5); -fx-background-radius: 25;" styleClass="fillIn" stylesheets="@../../../css/checkIn_style.css" VBox.vgrow="ALWAYS">
          <children>
-            <HBox prefHeight="163.0" prefWidth="322.0">
+            <HBox alignment="CENTER" prefHeight="163.0" prefWidth="322.0">
                <children>
-                  <VBox prefHeight="171.0" prefWidth="600.0">
+                  <VBox alignment="CENTER" prefHeight="171.0" prefWidth="600.0">
                      <children>
-                        <HBox prefHeight="43.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                        <HBox prefHeight="43.0" prefWidth="600.0">
                            <children>
                               <Label prefHeight="30.0" prefWidth="113.0" text="Full Name: " textFill="#f7f4f4">
                                  <font>
@@ -61,7 +61,7 @@
                               </Label>
                            </children>
                         </HBox>
-                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="43.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="43.0" prefWidth="600.0">
                            <children>
                               <Label prefHeight="30.0" prefWidth="113.0" text="E-mail:" textFill="#faf4f4">
                                  <font>
@@ -84,7 +84,7 @@
                               </Label>
                            </children>
                         </HBox>
-                        <HBox layoutX="10.0" layoutY="53.0" prefHeight="43.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                        <HBox layoutX="10.0" layoutY="53.0" prefHeight="43.0" prefWidth="600.0">
                            <children>
                               <Label prefHeight="30.0" prefWidth="113.0" text="Phone:" textFill="#f4f3f3">
                                  <font>
@@ -111,9 +111,9 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox prefHeight="163.0" prefWidth="271.0">
+            <HBox alignment="CENTER" prefHeight="163.0" prefWidth="271.0">
                <children>
-                  <VBox prefHeight="182.0" prefWidth="315.0">
+                  <VBox alignment="CENTER" prefHeight="182.0" prefWidth="315.0">
                      <children>
                         <HBox alignment="CENTER" prefHeight="43.0" prefWidth="600.0">
                            <children>
@@ -237,7 +237,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="74.0" prefWidth="196.0" spacing="10.0" HBox.hgrow="ALWAYS">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../css/checkIn_style.css" text="Refresh">
+                  <Button mnemonicParsing="false" onAction="#refreshBtn" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../css/checkIn_style.css" text="Refresh">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>

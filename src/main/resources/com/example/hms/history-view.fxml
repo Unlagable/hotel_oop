@@ -33,7 +33,7 @@
         </TableView>
       <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Refresh" />
+            <Button mnemonicParsing="false" onAction="#refreshBtn" prefHeight="50.0" prefWidth="100.0" text="Refresh" />
          </children>
          <VBox.margin>
             <Insets left="25.0" right="25.0" />

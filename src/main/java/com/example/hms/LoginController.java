@@ -95,7 +95,7 @@ public class LoginController implements Initializable {
                 currentUser.setPassword(user.getPassword());
                 currentUser.setEmail(user.getEmail());
                 currentUser.setPhoneNum(user.getPhoneNum());
-                getCurrentUserHistory();
+
                 getHomeScene(event,fName);
                 break;
             }
@@ -158,15 +158,7 @@ public class LoginController implements Initializable {
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.show();
     }
-    public void getCurrentUserHistory(){
-        for (AllRoomDetail roomHistory: Main.roomDetails) {
-            if (roomHistory.getUser().getUsername().equals(currentUser.getUsername())){
-                currentUserHistory.add(roomHistory);
-                System.out.println(roomHistory);
-                System.out.println("Error");
-            }
-        }
-    }
+
     public void signUp(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("userSignUp-view.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();

@@ -53,7 +53,7 @@ public class HistoryController implements Initializable {
 
     }
     private void loaddata(){
-
+        historyList.clear();
         historyList.addAll(Main.roomDetails);
         historyListTable.setItems(historyList);
 
@@ -64,4 +64,5 @@ public class HistoryController implements Initializable {
         initeCols();
         loaddata();
     }
+    public void refreshBtn(){loaddata();}
 }

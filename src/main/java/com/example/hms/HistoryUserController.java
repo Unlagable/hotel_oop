@@ -47,8 +47,20 @@ public class HistoryUserController implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
+        getCurrentUserHistory();
         initeCols();
         loadData();
+    }
+    public void refreshBtn(){getCurrentUserHistory();loadData();}
+    public void getCurrentUserHistory(){
+        LoginController.currentUserHistory.clear();
+        for (AllRoomDetail roomHistory: Main.roomDetails) {
+            if (roomHistory.getUser().getUsername().equals(LoginController.currentUser.getUsername())){
+                LoginController.currentUserHistory.add(roomHistory);
+                System.out.println(roomHistory);
+                System.out.println("Error");
+            }
+        }
     }
 
 }

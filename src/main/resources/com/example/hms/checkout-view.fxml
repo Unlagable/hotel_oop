@@ -255,7 +255,7 @@
                               <Insets />
                            </HBox.margin>
                         </Label>
-                        <DatePicker fx:id="checkOutDate" prefHeight="50.0" prefWidth="200.0">
+                        <DatePicker fx:id="checkOutDate" prefHeight="50.0" prefWidth="200.0" promptText="MM/DD/YYYY">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>

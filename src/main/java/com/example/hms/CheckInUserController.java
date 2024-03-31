@@ -60,11 +60,8 @@ public class CheckInUserController implements Initializable {
                 break;
             }
         }
-        lb_roomType.setText("");
-        lb_capacity.setText("");
-        lb_price.setText("");
-        roomNum.setValue("");
-        checkInDate.setValue(null);
+        clearAll();
+
 
     }
     public void getCurrentUser(){
@@ -109,6 +106,14 @@ public class CheckInUserController implements Initializable {
         list_Room.clear();
         list_Room.addAll(Main.availableRoomList);
         list_room_tableview.setItems(list_Room);
+    }
+    public void refreshBtn(){getAvailableRoom();loadData();clearAll();}
+    public void clearAll(){
+        lb_roomType.setText("");
+        lb_capacity.setText("");
+        lb_price.setText("");
+        roomNum.setValue("");
+        checkInDate.setValue(null);
     }
 
 }
