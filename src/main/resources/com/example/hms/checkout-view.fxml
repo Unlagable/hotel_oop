@@ -28,14 +28,14 @@
       </Label>
       <AnchorPane layoutY="58.0" prefHeight="626.0" prefWidth="864.0">
          <children>
-            <TableView fx:id="checkOutListTable" layoutX="-5.6" layoutY="14.0" prefHeight="226.0" prefWidth="884.0" AnchorPane.bottomAnchor="388.4" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="-14.0" AnchorPane.topAnchor="13.599999999999937">
+            <TableView fx:id="checkOutListTable" AnchorPane.bottomAnchor="389.0" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="-14.0" AnchorPane.topAnchor="14.0">
                <columns>
-                  <TableColumn fx:id="roomNumber" prefWidth="70.40002745389938" text="Room No:" />
-                  <TableColumn fx:id="username" prefWidth="181.5999755859375" text="Customer Name" />
-                  <TableColumn fx:id="checkInDate" prefWidth="187.99998474121094" text="Checked-In Date" />
-                  <TableColumn fx:id="email" prefWidth="64.0" text="Nº" />
-                  <TableColumn fx:id="price" prefWidth="142.39993286132812" text="Price" />
-                  <TableColumn fx:id="roomStatus" prefWidth="212.79998779296875" text="Status" />
+                  <TableColumn fx:id="roomNumber" prefWidth="83.20001286268234" text="Room No:" />
+                  <TableColumn fx:id="username" prefWidth="140.8000259399414" text="Customer Name" />
+                  <TableColumn fx:id="checkInDate" prefWidth="153.59996032714844" text="Checked-In Date" />
+                  <TableColumn fx:id="email" prefWidth="188.79989624023438" text="Email" />
+                  <TableColumn fx:id="price" prefWidth="140.00006103515625" text="Price" />
+                  <TableColumn fx:id="roomStatus" prefWidth="175.19989013671875" text="Status" />
                </columns>
             </TableView>
             <VBox layoutX="10.0" layoutY="238.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="758.0">
