@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.AddRoomController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="400.0" styleClass="box" stylesheets="@../../../css/checkIn_style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.AddRoomController">
     <children>
-        <Label alignment="CENTER" prefHeight="54.0" prefWidth="368.0" text="Add Room" textFill="#2b31c7" wrapText="true">
+        <Label alignment="CENTER" prefHeight="54.0" prefWidth="368.0" text="Add Room" textFill="#0e0e18" wrapText="true">
             <font>
-                <Font size="20.0" />
+                <Font size="30.0" />
             </font>
             <VBox.margin>
                 <Insets top="10.0" />
@@ -17,7 +21,7 @@
         </Label>
         <HBox prefHeight="66.0" prefWidth="353.0">
             <children>
-                <Label prefHeight="52.0" prefWidth="125.0" text="Room Nº: ">
+                <Label prefHeight="52.0" prefWidth="125.0" text="Room Nº: " textFill="WHITE">
                     <font>
                         <Font size="20.0" />
                     </font>
@@ -30,7 +34,7 @@
         </HBox>
         <HBox layoutX="25.0" layoutY="85.0" prefHeight="66.0" prefWidth="353.0">
             <children>
-                <Label prefHeight="52.0" prefWidth="125.0" text="Type: ">
+                <Label prefHeight="52.0" prefWidth="125.0" text="Type: " textFill="#fffcfc">
                     <font>
                         <Font size="20.0" />
                     </font>
@@ -40,7 +44,7 @@
         </HBox>
         <HBox layoutX="25.0" layoutY="152.0" prefHeight="66.0" prefWidth="353.0">
             <children>
-                <Label prefHeight="52.0" prefWidth="125.0" text="Capacity: ">
+                <Label prefHeight="52.0" prefWidth="125.0" text="Capacity: " textFill="WHITE">
                     <font>
                         <Font size="20.0" />
                     </font>
@@ -50,7 +54,7 @@
         </HBox>
         <HBox layoutX="25.0" layoutY="218.0" prefHeight="66.0" prefWidth="353.0">
             <children>
-                <Label prefHeight="52.0" prefWidth="125.0" text="Price: ">
+                <Label prefHeight="52.0" prefWidth="125.0" text="Price: " textFill="WHITE">
                     <font>
                         <Font size="20.0" />
                     </font>
@@ -60,7 +64,7 @@
         </HBox>
       <HBox layoutX="25.0" layoutY="284.0" prefHeight="58.0" prefWidth="385.0">
          <children>
-            <Label prefHeight="52.0" prefWidth="125.0" text="Status: ">
+            <Label prefHeight="52.0" prefWidth="125.0" text="Status: " textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
@@ -68,18 +72,27 @@
             <ChoiceBox fx:id="choiceBox_Status" prefHeight="47.0" prefWidth="223.0" />
          </children>
       </HBox>
-      <Label fx:id="lb_mess" alignment="CENTER" prefHeight="44.0" prefWidth="362.0" />
-      <HBox prefHeight="72.0" prefWidth="230.0">
+      <Label fx:id="lb_mess" alignment="CENTER" prefHeight="44.0" prefWidth="362.0">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <HBox prefHeight="62.0" prefWidth="230.0">
          <children>
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addRoomBtn" prefHeight="50.0" prefWidth="100.0" text="Submit">
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addRoomBtn" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: lightblue;" text="Submit">
                <HBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
             </Button>
-            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#cancelBtn" prefHeight="50.0" prefWidth="100.0" text="Cancel">
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#cancelBtn" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #c94c4c;" text="Cancel">
                <HBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </HBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
             </Button>
          </children>
          <VBox.margin>
