@@ -9,7 +9,7 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="705.0" stylesheets="@../../../css/home_styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.LoginController">
     <children>
-      <AnchorPane prefHeight="130.0" prefWidth="620.0" styleClass="banner" stylesheets="@../../../css/home_styles.css" />
+      <AnchorPane prefHeight="100.0" prefWidth="706.0" styleClass="banner" stylesheets="@../../../css/home_styles.css" />
         <StackPane prefHeight="467.0" prefWidth="700.0" VBox.vgrow="ALWAYS">
             <children>
                 <TabPane prefHeight="221.0" prefWidth="517.0" styleClass="log-bg" stylesheets="@../../../css/home_styles.css" tabClosingPolicy="UNAVAILABLE" tabMinWidth="87.0">

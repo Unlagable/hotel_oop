@@ -18,11 +18,11 @@
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
             </padding>
         </Label>
-        <HBox prefHeight="233.0" prefWidth="600.0">
+        <HBox alignment="TOP_CENTER" prefHeight="233.0" prefWidth="557.0">
             <children>
-                <HBox prefHeight="191.0" prefWidth="600.0" style="-fx-background-color: #ffef96;">
+                <HBox alignment="CENTER" prefHeight="233.0" prefWidth="460.0" style="-fx-background-color: #ffef96; -fx-background-radius: 25;">
                     <children>
-                        <VBox alignment="CENTER" prefHeight="229.0" prefWidth="410.0" style="-fx-background-color: cream;">
+                        <VBox alignment="CENTER" prefHeight="233.0" prefWidth="428.0" style="-fx-background-color: cream;">
                             <children>
                                 <HBox alignment="CENTER" prefHeight="43.0" prefWidth="600.0">
                                     <children>
@@ -118,7 +118,7 @@
                         </HBox>
                             </children>
                      <HBox.margin>
-                        <Insets left="100.0" />
+                        <Insets />
                      </HBox.margin>
                         </VBox>
                     </children>

@@ -14,7 +14,7 @@
          <bottom>
             <HBox alignment="CENTER_RIGHT" prefHeight="74.0" prefWidth="709.0" BorderPane.alignment="CENTER_RIGHT">
                <children>
-                  <Button layoutX="470.0" layoutY="22.0" mnemonicParsing="false" onAction="#deleteData" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: red;" text="delete">
+                  <Button layoutX="470.0" layoutY="22.0" mnemonicParsing="false" onAction="#deleteData" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: red;" text="Delete">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>

@@ -32,7 +32,7 @@
             </TableView>
          </children>
       </VBox>
-      <HBox alignment="CENTER" prefHeight="182.0" prefWidth="717.0" style="-fx-border-radius: 25; -fx-background-color: rgba(0, 0, 0,0.5); -fx-border-color: black; -fx-background-radius: 25;" styleClass="fillIn" stylesheets="@../../../css/checkIn_style.css">
+      <HBox alignment="CENTER" prefHeight="182.0" prefWidth="717.0" style="-fx-background-color: rgba(0, 0, 0,0.5); -fx-background-radius: 25;" styleClass="fillIn" stylesheets="@../../../css/checkIn_style.css">
          <children>
             <HBox prefHeight="163.0" prefWidth="322.0">
                <children>
@@ -55,6 +55,9 @@
                                  <padding>
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </padding>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
                               </Label>
                            </children>
                         </HBox>
@@ -75,6 +78,9 @@
                                  <padding>
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </padding>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
                               </Label>
                            </children>
                         </HBox>
@@ -95,6 +101,9 @@
                                  <padding>
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </padding>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
                               </Label>
                            </children>
                         </HBox>
@@ -140,6 +149,9 @@
                                  <HBox.margin>
                                     <Insets top="5.0" />
                                  </HBox.margin>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
                               </Label>
                            </children>
                         </HBox>
@@ -163,6 +175,9 @@
                                  <padding>
                                     <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                                  </padding>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
                               </Label>
                            </children>
                         </HBox>
@@ -183,6 +198,9 @@
                                  <padding>
                                     <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                                  </padding>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
                               </Label>
                            </children>
                         </HBox>

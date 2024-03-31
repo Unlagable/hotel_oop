@@ -28,7 +28,7 @@
                   <Insets />
                </HBox.margin>
             </Label>
-            <TextField fx:id="usernameTextField" prefHeight="50.0" prefWidth="190.0">
+            <TextField fx:id="usernameTextField" prefHeight="50.0" prefWidth="190.0" promptText="Enter Username">
                <HBox.margin>
                   <Insets right="20.0" />
                </HBox.margin>
@@ -51,7 +51,7 @@
                   <Insets />
                </HBox.margin>
             </Label>
-            <PasswordField fx:id="passwordTextField" prefHeight="50.0" prefWidth="190.0">
+            <PasswordField fx:id="passwordTextField" prefHeight="50.0" prefWidth="190.0" promptText="Enter Password">
                <HBox.margin>
                   <Insets right="20.0" />
                </HBox.margin></PasswordField>

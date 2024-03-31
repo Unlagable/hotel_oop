@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="TOP_CENTER" prefHeight="445.0" prefWidth="1346.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.HistoryController">
+<VBox alignment="TOP_CENTER" prefHeight="505.0" prefWidth="1346.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.HistoryController">
     <children>
         <Label alignment="CENTER" contentDisplay="RIGHT" text="Check In &amp; Out History">
             <VBox.margin>
@@ -15,7 +15,7 @@
                 <Font size="18.0" />
             </font>
         </Label>
-        <TableView fx:id="historyListTable" prefWidth="701.0">
+        <TableView fx:id="historyListTable" prefWidth="1337.0">
             <columns>
                 <TableColumn fx:id="roomNumber" prefWidth="66.20001220703125" text="Room No" />
                 <TableColumn fx:id="username" prefWidth="125.60000610351562" text="Name" />
@@ -28,6 +28,14 @@
                 <TableColumn fx:id="price" prefWidth="130.4000244140625" text="Price" />
             </columns>
         </TableView>
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="100.0" text="Refresh" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
     </children>
    <padding>
       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
