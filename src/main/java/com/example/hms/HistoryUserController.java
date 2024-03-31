@@ -41,6 +41,7 @@ public class HistoryUserController implements Initializable {
 
     }
     private void loadData(){
+        userHistoryList.clear();
         userHistoryList.addAll(LoginController.currentUserHistory);
         userHistoryListTable.setItems(userHistoryList);
     }

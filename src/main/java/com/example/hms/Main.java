@@ -33,6 +33,7 @@ public class Main extends Application {
         try {
             fos = new FileOutputStream(fl,true);
             fox = new FileOutputStream(roomDetailFile,true);
+            readUserFile(LoginController.users,userFile);
             readRoomTable(roomList,fl);
             readDataOfAllRoom(roomDetails,roomDetailFile);
             addToAvailableRoom();
@@ -143,6 +144,22 @@ public class Main extends Application {
             System.out.println(s);
             roomDetails.add(s);
         }
+    }
+    public void readUserFile(ArrayList<UserDetail> users, File fl) throws FileNotFoundException {
+        users.clear();
+        Scanner cs  = new Scanner(fl);
+        cs.useDelimiter(";|\r\n");
+
+        while (cs.hasNextLine()){
+            UserDetail s = new UserDetail();
+            s.setUsername(cs.next());
+            s.setPassword(cs.next());
+            s.setEmail(cs.next());
+            s.setPhoneNum(cs.next());
+            cs.nextLine();
+            users.add(s);
+        }
+
     }
     public LocalDate readDate(Scanner cs){
         String s = cs.next() ;

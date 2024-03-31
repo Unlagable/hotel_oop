@@ -116,7 +116,7 @@ public class CheckOutController implements Initializable {
     }
     public void updateCheckout(AllRoomDetail room, AllRoomDetail updated){
         for (AllRoomDetail list: Main.roomDetails) {
-            if (list.getUser().equals(room.getUser()) && list.getRoomTable().equals(room.getRoomTable()) && list.getCheckInDate().equals(room.getCheckInDate()) && list.getCheckOutDate()==null ){
+            if (list.getUser().equals(room.getUser()) && list.getRoomTable().equals(room.getRoomTable()) && list.getCheckInDate().equals(room.getCheckInDate()) && (list.getCheckOutDate()==null) ){
                 Main.roomDetails.set(Main.roomDetails.indexOf(room),updated);
             }
         }

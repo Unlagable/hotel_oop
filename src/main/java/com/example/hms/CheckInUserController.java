@@ -51,6 +51,7 @@ public class CheckInUserController implements Initializable {
             if (room.getRoomNo().equalsIgnoreCase(roomNum.getValue())){
                 room.setStatus("Unavailable");
                 AllRoomDetail roomDetail = new AllRoomDetail(LoginController.currentUser,room,checkInDate.getValue());
+                System.out.println(roomDetail);
                 Main.roomDetails.add(roomDetail);
                 Main.unavailableRoomList.add(roomDetail);
                 Main.availableRoomList.remove(room);

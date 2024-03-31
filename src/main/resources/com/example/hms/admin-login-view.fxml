@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="376.0" prefWidth="363.0" style="-fx-background-color: #F6F6DF;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.LoginController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="376.0" prefWidth="363.0" style="-fx-background-color: #F6F6DF;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hms.LoginController">
    <children>
       <Label alignment="CENTER" prefHeight="56.0" prefWidth="367.0" text="Admin Log-in">
          <VBox.margin>
@@ -15,9 +15,9 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <HBox prefHeight="62.0" prefWidth="363.0">
+      <HBox alignment="CENTER" prefHeight="62.0" prefWidth="363.0">
          <children>
-            <Label prefHeight="60.0" prefWidth="153.0" text="Username:">
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="153.0" text="Username:">
                <font>
                   <Font size="20.0" />
                </font>
@@ -25,12 +25,12 @@
                   <Insets left="10.0" />
                </padding>
                <HBox.margin>
-                  <Insets top="5.0" />
+                  <Insets />
                </HBox.margin>
             </Label>
-            <TextField fx:id="usernameTextField" prefHeight="50.0" prefWidth="191.0">
+            <TextField fx:id="usernameTextField" prefHeight="50.0" prefWidth="190.0">
                <HBox.margin>
-                  <Insets top="5.0" />
+                  <Insets right="20.0" />
                </HBox.margin>
             </TextField>
          </children>
@@ -38,9 +38,9 @@
             <Insets top="10.0" />
          </VBox.margin>
       </HBox>
-      <HBox layoutX="10.0" layoutY="97.0" prefHeight="62.0" prefWidth="363.0">
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="97.0" prefHeight="62.0" prefWidth="363.0">
          <children>
-            <Label prefHeight="60.0" prefWidth="153.0" text="Password:">
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="153.0" text="Password:">
                <font>
                   <Font size="20.0" />
                </font>
@@ -48,20 +48,19 @@
                   <Insets left="10.0" />
                </padding>
                <HBox.margin>
-                  <Insets top="5.0" />
+                  <Insets />
                </HBox.margin>
             </Label>
-            <TextField fx:id="passwordTextField" prefHeight="50.0" prefWidth="193.0">
+            <PasswordField fx:id="passwordTextField" prefHeight="50.0" prefWidth="190.0">
                <HBox.margin>
-                  <Insets top="5.0" />
-               </HBox.margin>
-            </TextField>
+                  <Insets right="20.0" />
+               </HBox.margin></PasswordField>
          </children>
          <VBox.margin>
             <Insets top="10.0" />
          </VBox.margin>
       </HBox>
-      <HBox prefHeight="62.0" prefWidth="363.0" spacing="10.0">
+      <HBox alignment="CENTER" prefHeight="62.0" prefWidth="363.0" spacing="10.0">
          <children>
             <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#loginAdmin" prefHeight="54.0" prefWidth="126.0" style="-fx-background-color: #4C63A9;" text="Log in">
                <font>
@@ -72,9 +71,6 @@
                   <Font size="15.0" />
                </font></Button>
          </children>
-         <padding>
-            <Insets left="50.0" right="50.0" />
-         </padding>
          <VBox.margin>
             <Insets top="25.0" />
          </VBox.margin>

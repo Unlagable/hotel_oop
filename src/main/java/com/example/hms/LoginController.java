@@ -7,10 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -30,10 +27,10 @@ public class LoginController implements Initializable {
     @FXML
     TextField usernameTextField;
     @FXML
-    TextField passwordTextField;
+    PasswordField passwordTextField;
     @FXML
     protected Label lb_mess;
-    File fl = new File("userDetail.txt");
+    File fl = new File("adminDetail.txt");
     public static ArrayList<UserDetail> users = new ArrayList<>();
     ArrayList<UserDetail> admin = new ArrayList<>();
 
@@ -74,7 +71,7 @@ public class LoginController implements Initializable {
 
 
 //        ArrayList<HotelRoomTable> hotel = new ArrayList<>();
-        File fl = new File("adminDetail.txt");
+//        File fl = new File("adminDetail.txt");
         String fName = "homeAdmin-view.fxml";
 //        FileOutputStream fos = new FileOutputStream(fl,true);
 //        PrintWriter pw = new PrintWriter(fos);
@@ -83,7 +80,7 @@ public class LoginController implements Initializable {
         String username = usernameTextField.getText();
         String password = passwordTextField.getText();
 
-        readFile(admin,fl);
+
         checkLogin(event,username,password,fName,admin);
 
     }
@@ -166,6 +163,7 @@ public class LoginController implements Initializable {
             if (roomHistory.getUser().getUsername().equals(currentUser.getUsername())){
                 currentUserHistory.add(roomHistory);
                 System.out.println(roomHistory);
+                System.out.println("Error");
             }
         }
     }
@@ -181,7 +179,7 @@ public class LoginController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
-            readFile(users,fl);
+            readFile(admin,fl);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
