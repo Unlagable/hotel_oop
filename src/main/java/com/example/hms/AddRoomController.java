@@ -48,18 +48,21 @@ public class AddRoomController implements Initializable {
     public void addRoomBtn(ActionEvent event){
         if (!txt_RoomNo.getText().isEmpty() && !txt_type.getText().isEmpty() && !txt_capacity.getText().isEmpty() && !txt_price.getText().isEmpty() && !choiceBox_Status.getSelectionModel().isEmpty()){
             HotelRoomTable room = new HotelRoomTable(txt_RoomNo.getText(),txt_type.getText(),txt_capacity.getText(),txt_price.getText(),choiceBox_Status.getValue());
+
+
+
+
+            Main.roomList.add(room);
+            Main.availableRoomList.add(room);
+            System.out.println("Add Succeed");
+            lb_mess.setText("Room Successfully Added");
+            System.out.println(room);
             txt_RoomNo.setText("");
             txt_type.setText("");
             txt_capacity.setText("");
             txt_price.setText("");
             choiceBox_Status.setValue("");
 
-
-
-            Main.roomList.add(room);
-            System.out.println("Add Succeed");
-            lb_mess.setText("Room Successfully Added");
-            System.out.println(room);
         }else {
             lb_mess.setText("Please Enter All Information");
         }

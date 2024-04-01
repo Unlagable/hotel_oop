@@ -1,3 +1,6 @@
-2;03;3;3;Unavailable
-5;03;3;3;Available
-6;vip;1;200;Unavailable
+001;Normal;2;100;Unavailable
+002;VIP;3;200;Unavailable
+003;Family Room;5;300;Unavailable
+004;Single Room;2;100;Available
+005;VVIP;3;500;Available
+006;Double VIP Room;3;250;Unavailable

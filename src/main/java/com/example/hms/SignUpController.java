@@ -38,6 +38,12 @@ public class SignUpController {
     public void adduser(){
         UserDetail signUpUser = new UserDetail(txt_username.getText(),txt_password.getText(),txt_email.getText(),txt_phoneNum.getText());
         LoginController.users.add(signUpUser);
+        Alert success = new Alert(Alert.AlertType.INFORMATION);
+        success.setTitle("Success");
+        success.setHeaderText("Your Account successfully Created");
+        success.showAndWait();
+
+
         System.out.println(signUpUser);
     }
     public void confirmPassword(){

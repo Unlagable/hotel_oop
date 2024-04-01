@@ -1,3 +1,6 @@
-2024-03-28;2024-03-28;user;1;2;2;03;3;3;Available
-2024-03-28;null;admin;1;2;6;vip;1;200;Unavailable
-2024-04-02;null;user;1;2;2;03;3;3;Unavailable
+2024-03-31;2024-04-01;admin;1;2;001;Normal;2;100;Available
+2024-03-31;null;admin;1;2;002;VIP;3;200;Unavailable
+2024-03-31;2024-04-01;Milly ;milly02@gmail.com;012456789;004;Single Room;2;100;Available
+2024-04-01;null;user;1;2;003;Family Room;5;300;Unavailable
+2024-05-03;null;smith;smith@gmail.com;012345678;001;Normal;2;100;Unavailable
+2024-04-09;null;john;john2gmail.com;12345;006;Double VIP Room;3;250;Unavailable
